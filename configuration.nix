@@ -37,8 +37,9 @@
 
   environment.systemPackages = with pkgs; [
     aspell
-    emacs
     findutils
+
+    # System utilities
     fish
     gnugrep
     less
@@ -48,6 +49,12 @@
     unzip
     xz
     zip
+
+    # Dropbox
+    dropbox
+
+    # DEs
+    emacs
   ];
 
   #Services
@@ -65,8 +72,7 @@
   # Enable the XFCE Desktop environment
   services.xserver.desktopManager.xfce.enable = true;
 
-  users.extraUsers.jethro = 
-    {
+  users.extraUsers.jethro = {
       isNormalUser = true;
       initialPassword = "password";
       uid = 1000;
@@ -77,5 +83,14 @@
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "16.09";
+
+  system.autoUpgrade = {
+    enable = true;
+    channel = "https://nixos.org/channels/nixos-unstable";
+  };
+  
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.permittedInsecurePackages = [
+    "webkitgtk-2.4.11"
+  ];
 }
