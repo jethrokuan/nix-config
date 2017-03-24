@@ -5,15 +5,25 @@
 { config, pkgs, ... }:
 
 {
+  environment.etc."profile.local".text = 
+  ''
+  # /etc/profile.local: DO NOT EDIT - this file has been generated automatically.
+
+  if test -f "$HOME/.profile"; then
+    . "$HOME/.profile"
+  fi
+  '';
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ];
+
+      ./dropbox.nix
+    ];
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
+ 
   networking.hostName = "jethro-laptop"; # Define your hostname.
   networking.networkmanager.enable = true;
 
@@ -26,10 +36,10 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Singapore";
-  services.ntp = {
-    enable = true;
-    servers = [ "0.pool.ntp.org" "1.pool.ntp.org" "2.pool.ntp.org" ];
-  };
+  # services.ntp = {
+  #   enable = true;
+  #   servers = [ "0.pool.ntp.org" "1.pool.ntp.org" "2.pool.ntp.org" ];
+  # };
 
 
   # List packages installed in system profile. To search by name, run:
