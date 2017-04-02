@@ -5,18 +5,9 @@
 { config, pkgs, ... }:
 
 {
-  environment.etc."profile.local".text = 
-  ''
-  # /etc/profile.local: DO NOT EDIT - this file has been generated automatically.
-
-  if test -f "$HOME/.profile"; then
-    . "$HOME/.profile"
-  fi
-  '';
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-
       ./dropbox.nix
     ];
 
@@ -48,20 +39,23 @@
   environment.systemPackages = with pkgs; [
     aspell
     findutils
+    gitAndTools.gitFull
 
     # System utilities
     fish
-    gnugrep
+    ripgrep
     less
     tree
+    rofi
     stow
     unrar
     unzip
     xz
     zip
+    xarchiver
 
     # Dropbox
-    dropbox
+    dropbox-cli
 
     # DEs
     emacs
@@ -71,8 +65,6 @@
   services.openssh.enable = true;
   services.printing.enable = true;
   services.emacs.enable = true;
-  programs.fish.enable = true;
-  users.defaultUserShell = "/run/current-system/sw/bin/fish";
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -94,13 +86,10 @@
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "16.09";
 
+  nixpkgs.config.allowUnfree = true;
+
   system.autoUpgrade = {
     enable = true;
     channel = "https://nixos.org/channels/nixos-unstable";
-  };
-  
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "webkitgtk-2.4.11"
-  ];
+  }; 
 }
