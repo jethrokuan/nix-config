@@ -11,6 +11,8 @@
       ./dropbox.nix
     ];
 
+  nixpkgs.config.allowUnfree = true;
+
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -38,7 +40,6 @@
 
   environment.systemPackages = with pkgs; [
     aspell
-    findutils
     gitAndTools.gitFull
 
     # System utilities
@@ -54,12 +55,25 @@
     zip
     xarchiver
 
+    #Language Support
+    jdk
+
     # Dropbox
     dropbox-cli
 
     # DEs
     emacs
   ];
+
+  programs.java.enable = true;
+  programs.fish.enable = true;
+
+  fonts = {
+    enableFontDir = true;
+    fonts = with pkgs; [
+      iosevka
+    ];
+  };
 
   #Services
   services.openssh.enable = true;
@@ -85,8 +99,6 @@
 
   # The NixOS release to be compatible with for stateful data such as databases.
   system.stateVersion = "16.09";
-
-  nixpkgs.config.allowUnfree = true;
 
   system.autoUpgrade = {
     enable = true;
