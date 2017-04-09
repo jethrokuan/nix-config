@@ -8,7 +8,6 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./dropbox.nix
     ];
 
   nixpkgs.config.allowUnfree = true;
@@ -39,28 +38,50 @@
   # $ nix-env -qaP | grep wget
 
   environment.systemPackages = with pkgs; [
+    # System utilities
     aspell
     gitAndTools.gitFull
-
-    # System utilities
     fish
     ripgrep
     less
     tree
     rofi
     stow
+
+    # Archiving
     unrar
     unzip
     xz
     zip
     xarchiver
 
-    #Language Support
+    # Web
+    chromium
+
+    # Language Support
     jdk
+
+    # Tex
+    texlive.combined.scheme-full
 
     # Dropbox
     dropbox-cli
 
+    # XFCE
+    adapta-gtk-theme
+    xfce.exo
+    xfce.gtk_xfce_engine
+    xfce.libxfce4ui
+    xfce.libxfcegui4
+    xfce.xfce4_battery_plugin
+    xfce.xfwm4
+    xfce.xfwm4themes
+    xfce.thunar
+    xfce.thunar_volman
+    xfce.xfce4settings
+    xfce.xfconf
+    xfce.gvfs
+   
     # DEs
     emacs
   ];
