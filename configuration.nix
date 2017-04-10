@@ -43,10 +43,12 @@
     gitAndTools.gitFull
     fish
     ripgrep
+    fzf
     less
     tree
     rofi
     stow
+    redshift
 
     # Archiving
     unrar
@@ -124,6 +126,11 @@
   services.openssh.enable = true;
   services.printing.enable = true;
   services.emacs.enable = true;
+  services.redshift  {
+    enable = true;
+    latitude = "1.3521";
+    longitude = "103.8198";
+  } 
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
