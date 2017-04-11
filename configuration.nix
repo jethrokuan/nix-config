@@ -101,6 +101,11 @@
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
+      freefont_ttf
+      liberation_ttf
+      ubuntu_font_family
+      dejavu_fonts
+      vistafonts
       iosevka
     ];
   };
