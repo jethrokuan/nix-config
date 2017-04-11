@@ -28,87 +28,69 @@
 
   # Set your time zone.
   time.timeZone = "Asia/Singapore";
-  # services.ntp = {
-  #   enable = true;
-  #   servers = [ "0.pool.ntp.org" "1.pool.ntp.org" "2.pool.ntp.org" ];
-  # };
 
+  powerManagement.enable = true;
 
-  # List packages installed in system profile. To search by name, run:
-  # $ nix-env -qaP | grep wget
+  environment = {
+    shells = [
+      "${pkgs.bash}/bin/bash"
+      "${pkgs.fish}/bin/fish"
+    ];
+    variables = {
+      BROWSER = pkgs.lib.mkOverride 0 "chromium";
+      EDITOR = pkgs.lib.mkOverride 0 "emacs";
+    };
+    
+   systemPackages = with pkgs; [
+       # System utilities
+       aspell
+       gitAndTools.gitFull
+       fish
+       ripgrep
+       fzf
+       less
+       tree
+       rofi
+       stow
+       redshift
 
-  environment.systemPackages = with pkgs; [
-    # System utilities
-    aspell
-    gitAndTools.gitFull
-    fish
-    ripgrep
-    fzf
-    less
-    tree
-    rofi
-    stow
-    redshift
+       # Archiving
+       unrar
+       unzip
+       xz
+       zip
+       xarchiver
 
-    # Archiving
-    unrar
-    unzip
-    xz
-    zip
-    xarchiver
+       # Web
+       chromium
 
-    # Web
-    chromium
+       # Language Support
+       jdk
 
-    # Language Support
-    jdk
+       # Tex
+       texlive.combined.scheme-full
 
-    # Tex
-    texlive.combined.scheme-full
+       # Dropbox
+       dropbox-cli
 
-    # Dropbox
-    dropbox-cli
-
-    # XFCE
-    adapta-gtk-theme
-    xfce.exo
-    xfce.gtk_xfce_engine
-    xfce.libxfce4ui
-    xfce.libxfcegui4
-    xfce.xfce4_battery_plugin
-    xfce.xfwm4
-    xfce.xfwm4themes
-    xfce.thunar
-    xfce.thunar_volman
-    xfce.xfce4settings
-    xfce.xfconf
-    xfce.gvfs
+       # XFCE
+       adapta-gtk-theme
+       xfce.exo
+       xfce.gtk_xfce_engine
+       xfce.libxfce4ui
+       xfce.libxfcegui4
+       xfce.xfce4_battery_plugin
+       xfce.xfwm4
+       xfce.xfwm4themes
+       xfce.thunar
+       xfce.thunar_volman
+       xfce.xfce4settings
+       xfce.xfconf
+       xfce.gvfs
    
-    # DEs
-    emacs
-  ];
-
-  systemd.user = { 
-    services = {
-      mbsync = {
-        description = "mailbox sync";
-        after       = [ "network-online.target" ];
-        wantedBy    = [ "default.target" ];
-        path        = [ pkgs.isync ];
-        script      = ''mbsync -a'';
-      };
-    };
-
-    timers = {
-      mbsync = {
-        timerConfig = {
-          OnUnitInactiveSec = "5min";
-          Persistent = "true";
-        };
-        wantedBy = [ "timers.target" ];
-      };
-    };
-
+       # DEs
+       emacs
+    ]; 
   };
 
   programs.java.enable = true;
@@ -117,6 +99,7 @@
 
   fonts = {
     enableFontDir = true;
+    enableGhostscriptFonts = true;
     fonts = with pkgs; [
       iosevka
     ];
@@ -126,11 +109,14 @@
   services.openssh.enable = true;
   services.printing.enable = true;
   services.emacs.enable = true;
-  services.redshift  {
+
+  services.redshift = {
     enable = true;
+
+    # Singapore
     latitude = "1.3521";
     longitude = "103.8198";
-  } 
+  };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
