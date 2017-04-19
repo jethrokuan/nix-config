@@ -94,12 +94,16 @@
        # Dropbox
        dropbox-cli
 
+       # PDF
+       zathura
+
        # XFCE
        adapta-gtk-theme
        xfce.exo
        xfce.gtk_xfce_engine
        xfce.libxfce4ui
        xfce.libxfcegui4
+       xfce.xfce4_pulseaudio_plugin
        xfce.xfce4_battery_plugin
        xfce.xfwm4
        xfce.xfwm4themes
