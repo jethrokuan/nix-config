@@ -21,16 +21,11 @@
     install rt2800usb ${pkgs.kmod}/sbin/modprobe --ignore-install rt2800usb && echo 0x0B05 0x17E8 >/sys/bus/usb/drivers/rt2800usb/new_id
   '';
 
-  hardware.pulseaudio.enable = true;
-  sound.mediaKeys = {
-    enable = true;
-    volumeStep = "5%";
-  };
-  # sound.extraConfig =
-  #   ''
-  #     defaults.pcm.!card 1
-  #     defaults.ctl.!card 1
-  #   '';
+  sound.extraConfig =
+    ''
+      defaults.pcm.!card 1
+      defaults.ctl.!card 1
+    '';
 
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
@@ -57,7 +52,7 @@
       "${pkgs.fish}/bin/fish"
     ];
     variables = {
-      BROWSER = pkgs.lib.mkOverride 0 "chromium";
+      BROWSER = pkgs.lib.mkOverride 0 "firefox";
       EDITOR = pkgs.lib.mkOverride 0 "emacs";
     };
     
@@ -83,13 +78,14 @@
        xarchiver
 
        # Web
-       chromium
+       firefox
+       conkeror
 
        # Language Support
        jdk
 
        # Tex
-       # texlive.combined.scheme-full
+       texlive.combined.scheme-full
 
        # Dropbox
        dropbox-cli
@@ -103,12 +99,10 @@
        xfce.gtk_xfce_engine
        xfce.libxfce4ui
        xfce.libxfcegui4
-       xfce.xfce4_pulseaudio_plugin
        xfce.xfce4_battery_plugin
        xfce.xfwm4
        xfce.xfwm4themes
        xfce.thunar
-       xfce.thunar_volman
        xfce.xfce4settings
        xfce.xfconf
        xfce.gvfs
@@ -165,6 +159,13 @@
 
   # Enable the XFCE Desktop environment
   services.xserver.desktopManager.xfce.enable = true;
+  #Thunar Volume Support
+  services.udisks2.enable = true;
+  services.xserver.desktopManager.xfce.thunarPlugins = [
+    pkgs.xfce.thunar-archive-plugin
+    pkgs.xfce.thunar-dropbox-plugin
+    pkgs.xfce.thunar_volman
+  ];
 
   users.extraUsers.jethro = {
       isNormalUser = true;
@@ -172,7 +173,7 @@
       uid = 1000;
       home = "/home/jethro";
       description = "Jethro Kuan";
-      extraGroups = ["wheel" "networkmanager" ];
+      extraGroups = ["wheel" "networkmanager" "uucp" ];
     };
 
   # The NixOS release to be compatible with for stateful data such as databases.
