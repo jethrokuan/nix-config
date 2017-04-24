@@ -92,6 +92,8 @@
 
        # PDF
        zathura
+       ghostscript
+       python27Packages.pygments
 
        # XFCE
        adapta-gtk-theme
