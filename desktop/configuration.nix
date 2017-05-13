@@ -10,7 +10,8 @@
       ./hardware-configuration.nix
     ];
 
-    
+
+  hardware.opengl.driSupport32Bit = true;
   nixpkgs.config.allowUnfree = true;
 
   # Setup to support wireless driver
@@ -69,13 +70,14 @@
        rofi
        stow
        redshift
+       nox
 
        # Archiving
        unrar
        unzip
        xz
        zip
-       xarchiver
+       gnome3.file-roller
 
        # Web
        firefox
@@ -108,7 +110,13 @@
        xfce.xfce4settings
        xfce.xfconf
        xfce.gvfs
-   
+
+       # Mail
+       isync
+       astroid
+       gnupg
+       msmtp
+       
        # DEs
        emacs
     ]; 
@@ -157,7 +165,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.libinput.enable = true;
-  services.xserver.layout = "dvorak";
+  services.xserver.layout = "us";
+  services.xserver.xkbVariant = "dvorak";
 
   # Enable the XFCE Desktop environment
   services.xserver.desktopManager.xfce.enable = true;
@@ -184,5 +193,9 @@
   system.autoUpgrade = {
     enable = true;
     channel = "https://nixos.org/channels/nixos-unstable";
-  }; 
+  };
+
+  nixpkgs.config.permittedInsecurePackages = [
+         "webkitgtk-2.4.11"
+  ];
 }
