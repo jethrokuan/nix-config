@@ -5,7 +5,5 @@
     unzip
     xz
     zip
-    gnome3.file-roller
   ];
-  
 }
