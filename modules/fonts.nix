@@ -5,6 +5,7 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       corefonts
+      font-droid
       iosevka
       fira-code
       source-code-pro
@@ -13,6 +14,7 @@
     ];
 
     fontconfig = {
+      enable = true;
       defaultFonts = {
        monospace = [ "Source Code Pro" ];
        sansSerif = [ "Source Sans Pro" ];

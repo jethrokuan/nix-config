@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    direnv
     aspell
     gitAndTools.gitFull      
     ripgrep
@@ -10,6 +11,6 @@
     tree
     rofi
     stow
-    nox  
+    nox
   ];       
 }

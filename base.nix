@@ -8,7 +8,7 @@
       /etc/nixos/extra.nix
 
       # DE
-      ./modules/xfce.nix
+      ./modules/desktop_environment.nix
       
       # Modules
       ./modules/system-util.nix
@@ -32,8 +32,9 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  
-  networking.networkmanager.enable = true;
+
+  networking.wicd.enable = true;
+  # networking.networkmanager.enable = true;
 
   # Select internationalisation properties.
    i18n = {
@@ -50,6 +51,8 @@
   #Services
   services.openssh.enable = true;
   services.printing.enable = true;
+
+  security.sudo.enable = true;
 
   users.extraUsers.jethro = {
       isNormalUser = true;
