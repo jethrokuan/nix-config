@@ -9,6 +9,7 @@
   # Stumpwm
   environment.systemPackages = with pkgs; [
     stumpwm
+    lispPackages.quicklisp
     dunst
     compton
   ];
