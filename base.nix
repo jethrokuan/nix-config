@@ -33,9 +33,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.useDHCP = false;
-  networking.wicd.enable = true;
-  # networking.networkmanager.enable = true;
+  # networking.useDHCP = false;
+  # networking.wicd.enable = true;
+  networking.networkmanager.enable = true;
 
   # Select internationalisation properties.
    i18n = {
