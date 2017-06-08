@@ -1,6 +1,6 @@
-# Setup to support wireless driver
 { config, pkgs, ... }:
 {
+  # Setup to support wireless driver
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "kvm-intel" "rt2800usb" ];
   boot.extraModprobeConfig = ''
@@ -15,4 +15,6 @@
     '';
 
   networking.hostName = "jethro-desktop"; # Define your hostname.
+
+  services.xserver.videoDrivers = [ "nvidia" ];
 }
