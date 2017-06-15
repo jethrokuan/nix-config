@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     direnv
+    wget
     aspell
     gitAndTools.gitFull      
     ripgrep
