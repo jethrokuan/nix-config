@@ -9,11 +9,13 @@
 
     # shells
     bash
+    fish
   ];
 
   environment.shells = [
     "${pkgs.bash}/bin/bash"
+    "${pkgs.fish}/bin/fish"
   ];
   
-  users.defaultUserShell = "/run/current-system/sw/bin/bash";
+  users.defaultUserShell = "/run/current-system/sw/bin/fish";
 }
