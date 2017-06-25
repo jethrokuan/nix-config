@@ -1,0 +1,22 @@
+{ config, pkgs, ... }:
+{
+  environment.systemPackages = with pkgs; [
+    mpc_cli
+    mopidy
+    mopidy-spotify
+    ncmpcpp
+  ];
+
+  services.mopidy = {
+    enable = true;
+    extensionPackages = [ pkgs.mopidy-spotify ];
+    configuration = ''
+      [spotify]
+      username = username
+      password = password
+      bitrate = 320
+      # client_id = id
+      # client_secret = secret
+    '';
+  };
+}

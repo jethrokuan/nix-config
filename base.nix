@@ -21,6 +21,8 @@
       ./modules/pdf.nix
       ./modules/archiver.nix
       ./modules/mail.nix
+      ./modules/udiskie.nix
+      ./modules/music.nix
 
       # Languages
       ./modules/languages/java.nix
@@ -62,7 +64,7 @@
       uid = 1000;
       home = "/home/jethro";
       description = "Jethro Kuan";
-      extraGroups = ["wheel" "networkmanager" "uucp" ];
+      extraGroups = ["wheel" "networkmanager" "uucp"];
     };
 
   # The NixOS release to be compatible with for stateful data such as databases.

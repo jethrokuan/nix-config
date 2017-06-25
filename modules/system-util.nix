@@ -13,5 +13,5 @@
     rofi
     stow
     nox
-  ];       
+  ];
 }
