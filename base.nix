@@ -21,8 +21,7 @@
       ./modules/pdf.nix
       ./modules/archiver.nix
       ./modules/mail.nix
-      ./modules/udiskie.nix
-      ./modules/music.nix
+      ./modules/udiskie.nix      
 
       # Languages
       ./modules/languages/java.nix
