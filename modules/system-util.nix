@@ -11,6 +11,8 @@
     less
     tree
     rofi
+    rofi-pass
+    pass
     stow
     nox
   ];
