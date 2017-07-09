@@ -46,11 +46,28 @@ in {
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.windowManager.stumpwm.enable = true;
 
+  systemd.user.services."compton" = {
+    enable = true;
+    description = "Compton compositor";
+    wantedBy = [ "default.target" ];
+    serviceConfig.Type = "forking";
+    serviceConfig.Restart = "always";
+    serviceConfig.RestartSec = 2;
+    serviceConfig.ExecStart = "${pkgs.compton}/bin/compton -b --config /home/jethro/.config/compton/compton.conf";
+  };
+
+  systemd.user.services."dunst" = {
+    enable = true;
+    description = "";
+    wantedBy = [ "default.target" ];
+    serviceConfig.Restart = "always";
+    serviceConfig.RestartSec = 2;
+    serviceConfig.ExecStart = "${pkgs.dunst}/bin/dunst";
+  };
+
   services.xserver.displayManager.sessionCommands = ''
     ${pkgs.xlibs.xrdb}/bin/xrdb -load $HOME/.XResources &
     ${pkgs.feh}/bin/feh --bg-scale $HOME/Pictures/wallpaper.png &
-    ${pkgs.compton}/bin/compton --config $XDG_CONFIG_HOME/compton/compton.conf &
-    ${pkgs.dunst}/bin/dunst &
     ${pkgs.rxvt_unicode}/bin/urxvtd &
     ${pkgs.dropbox}/bin/dropbox start &
   '';
