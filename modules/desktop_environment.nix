@@ -47,6 +47,15 @@ in {
 
   services.compton = {
     enable = true;
+    fade = true;
+    fadeDelta = 2;
+    inactiveOpacity = "0.85";
+    shadow = false;
+    extraOptions = ''
+      blur-background = true;
+      blur-background-frame = true;
+      blur-kern = "7x7box";
+    '';
   };
 
   systemd.user.services."dunst" = {
