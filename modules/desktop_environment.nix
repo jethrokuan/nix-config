@@ -24,6 +24,7 @@ in {
   services.xserver.libinput.enable = true;
   services.xserver.layout = "us";
   services.xserver.xkbVariant = "dvorak";
+  services.xserver.xkbOptions = "ctrl:nocaps";
 
   # Stumpwm
   environment.systemPackages = with pkgs; [
