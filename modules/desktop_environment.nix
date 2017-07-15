@@ -28,11 +28,10 @@ in {
   # Stumpwm
   environment.systemPackages = with pkgs; [
     xlibs.xrdb
-    feh
+    nitrogen
     stumpwm
     lispPackages.quicklisp
     dunst
-    compton
     dropbox
 
     breeze-qt5
@@ -46,14 +45,8 @@ in {
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.windowManager.stumpwm.enable = true;
 
-  systemd.user.services."compton" = {
+  services.compton = {
     enable = true;
-    description = "Compton compositor";
-    wantedBy = [ "default.target" ];
-    serviceConfig.Type = "forking";
-    serviceConfig.Restart = "always";
-    serviceConfig.RestartSec = 2;
-    serviceConfig.ExecStart = "${pkgs.compton}/bin/compton -b --config /home/jethro/.config/compton/compton.conf";
   };
 
   systemd.user.services."dunst" = {
@@ -67,7 +60,7 @@ in {
 
   services.xserver.displayManager.sessionCommands = ''
     ${pkgs.xlibs.xrdb}/bin/xrdb -load $HOME/.XResources &
-    ${pkgs.feh}/bin/feh --bg-scale $HOME/Pictures/wallpaper.png &
+    ${pkgs.nitrogen}/bin/nitrogen --restore &
     ${pkgs.rxvt_unicode}/bin/urxvtd &
     ${pkgs.dropbox}/bin/dropbox start &
   '';
