@@ -48,9 +48,7 @@ in {
 
   services.compton = {
     enable = true;
-    fade = true;
-    fadeDelta = 2;
-    inactiveOpacity = "0.85";
+    inactiveOpacity = "0.9";
     shadow = false;
     extraOptions = ''
       blur-background = true;
