@@ -5,7 +5,7 @@
     rxvt_unicode-with-plugins
     urxvt_font_size
     urxvt_perl
-    urxvt_tabbedex
+    # urxvt_tabbedex
 
     # shells
     bash
