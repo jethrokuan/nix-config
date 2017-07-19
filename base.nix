@@ -22,6 +22,7 @@
       ./modules/archiver.nix
       ./modules/mail.nix
       ./modules/udiskie.nix
+      ./modules/udev.nix
       ./modules/chat.nix
 
       # Languages
