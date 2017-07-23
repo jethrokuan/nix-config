@@ -41,6 +41,7 @@ in {
     iconTheme
     gnome3.adwaita-icon-theme
     hicolor_icon_theme
+    gvfs
   ];
 
   services.xserver.desktopManager.xterm.enable = false;
