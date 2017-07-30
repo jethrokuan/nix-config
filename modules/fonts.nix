@@ -5,12 +5,11 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       corefonts
-      font-droid
       iosevka
-      fira-code
       source-code-pro
       source-sans-pro
       source-serif-pro
+      nerdfonts
     ];
 
     fontconfig = {

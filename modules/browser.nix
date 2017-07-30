@@ -2,8 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     firefox
-    conkeror
-
     xfce.thunar
   ];
 
