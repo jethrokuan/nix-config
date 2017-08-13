@@ -23,7 +23,7 @@
       ./modules/mail.nix
       # ./modules/udiskie.nix
       ./modules/udev.nix
-      ./modules/chat.nix
+      # ./modules/chat.nix
 
       # Languages
       ./modules/languages/java.nix
