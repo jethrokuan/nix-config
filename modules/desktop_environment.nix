@@ -18,7 +18,15 @@ let
     # SVG loader for pixbuf (needed for GTK svg icon themes)
     export GDK_PIXBUF_MODULE_FILE=$(echo ${pkgs.librsvg.out}/lib/gdk-pixbuf-2.0/*/loaders.cache)
   '';
-  
+  stumpwm = pkgs.lib.overrideDerivation pkgs.stumpwm(x: {
+    nativeBuildInputs = x.nativeBuildInputs ++ [
+      pkgs.stumpwm.lispPackages.clx-truetype
+      pkgs.stumpwm.lispPackages.clx-xkeyboard
+    ];
+    installPhase = (x.installPhase or "") + ''
+      echo "$nativeBulidInputs" > "$out/nix-support/build-inputs"
+    '';
+  });
 in {
   services.xserver.enable = true;
   services.xserver.libinput.enable = true;
