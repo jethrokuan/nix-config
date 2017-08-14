@@ -6,9 +6,6 @@
       /etc/nixos/hardware-configuration.nix
       # Include desktop specific configuration
       /etc/nixos/extra.nix
-
-      # DE
-      ./modules/desktop_environment.nix
       
       # Modules
       ./modules/system-util.nix

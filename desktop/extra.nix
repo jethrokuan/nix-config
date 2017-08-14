@@ -13,4 +13,8 @@
   networking.hostName = "jethro-desktop"; # Define your hostname.
 
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  imports = [
+    ../modules/desktop-environment/stumpwm.nix
+  ];
 }
