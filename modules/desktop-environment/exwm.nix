@@ -1,10 +1,8 @@
 { config, pkgs, ... }:
-
-let
-  myEmacs = pkgs.emacs;
-  emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
-  emacs = emacsWithPackages (epkgs: (with epkgs.melpaPackages; [
-        aggressive-indent
+{
+  services.xserver.windowManager.exwm.enable = true;
+  services.xserver.windowManager.exwm.extraPackages = (epkgs: (with epkgs.melpaPackages; [
+    aggressive-indent
     avy
     bury-successful-compilation
     clj-refactor
@@ -83,12 +81,4 @@ let
     epkgs.org-plus-contrib
     epkgs.darkroom
   ]));
-in
-{
-  environment.systemPackages = [
-      emacs
-  ];
-  
-  services.emacs.package = emacs;
-  services.emacs.enable = true;
 }

@@ -21,18 +21,12 @@ let
   stumpwm = pkgs.lib.overrideDerivation pkgs.stumpwm(x: {
     nativeBuildInputs = x.nativeBuildInputs ++ [
       pkgs.stumpwm.lispPackages.clx-truetype
-      pkgs.stumpwm.lispPackages.clx-xkeyboard
     ];
     installPhase = (x.installPhase or "") + ''
       echo "$nativeBulidInputs" > "$out/nix-support/build-inputs"
     '';
   });
 in {
-  services.xserver.enable = true;
-  services.xserver.libinput.enable = true;
-  services.xserver.layout = "us";
-  services.xserver.xkbVariant = "dvorak";
-  services.xserver.xkbOptions = "ctrl:nocaps";
 
   # Stumpwm
   environment.systemPackages = with pkgs; [

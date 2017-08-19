@@ -6,6 +6,8 @@
       /etc/nixos/hardware-configuration.nix
       # Include desktop specific configuration
       /etc/nixos/extra.nix
+
+      ./modules/desktop-environment/stumpwm.nix
       
       # Modules
       ./modules/system-util.nix
@@ -50,6 +52,11 @@
   powerManagement.enable = true;
   
   #Services
+  services.xserver.enable = true;
+  services.xserver.libinput.enable = true;
+  services.xserver.layout = "us";
+  services.xserver.xkbVariant = "dvorak";
+  services.xserver.xkbOptions = "ctrl:nocaps";
   services.openssh.enable = true;
   services.printing.enable = true;
   services.udisks2.enable = true;
