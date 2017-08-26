@@ -53,7 +53,6 @@ in {
 
   services.compton = {
     enable = true;
-    inactiveOpacity = "0.8";
     shadow = false;
     extraOptions = ''
       blur-background = true;
