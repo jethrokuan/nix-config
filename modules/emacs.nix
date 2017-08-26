@@ -43,6 +43,7 @@ let
     ibuffer-projectile
     iedit
     indium
+    interleave
     isend-mode
     js-doc
     js2-refactor
