@@ -39,11 +39,13 @@ let
     go-mode
     golden-ratio
     guru-mode
+    haskell-mode
     highlight-indent-guides
     ibuffer-projectile
     iedit
     indium
     interleave
+    intero
     isend-mode
     js-doc
     js2-refactor
@@ -53,7 +55,9 @@ let
     markdown-mode
     move-text
     nix-mode
+    nix-sandbox
     no-littering
+    org-pomodoro
     paradox
     peep-dired
     projectile
