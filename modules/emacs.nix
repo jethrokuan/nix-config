@@ -4,7 +4,7 @@ let
   myEmacs = pkgs.emacs;
   emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
   emacs = emacsWithPackages (epkgs: (with epkgs.melpaPackages; [
-        aggressive-indent
+    aggressive-indent
     avy
     bury-successful-compilation
     clj-refactor
