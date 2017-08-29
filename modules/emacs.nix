@@ -14,7 +14,8 @@ let
     company-tern
     counsel-projectile
     company-quickhelp
-    crux    
+    crux
+    dante
     deft
     diff-hl
     dired-k
@@ -44,8 +45,7 @@ let
     ibuffer-projectile
     iedit
     indium
-    interleave
-    intero
+    interleave   
     isend-mode
     js-doc
     js2-refactor
