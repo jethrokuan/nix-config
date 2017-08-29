@@ -10,12 +10,13 @@ let
     clj-refactor
     company-anaconda
     company-auctex
+    company-ghc
     company-nixos-options
     company-tern
     counsel-projectile
     company-quickhelp
     crux
-    dante
+    # dante
     deft
     diff-hl
     dired-k
