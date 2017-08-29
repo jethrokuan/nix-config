@@ -70,11 +70,12 @@ let
     rust-mode
     scss-mode
     shackle
+    shm
     skewer-mode
     slime-company
     smartparens
     sos
-    sphinx-doc    
+    sphinx-doc
     use-package
     visual-regexp
     volatile-highlights
