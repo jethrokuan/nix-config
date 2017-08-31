@@ -28,6 +28,8 @@
       ./modules/languages/java.nix
     ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   hardware.opengl.driSupport32Bit = true;
   nixpkgs.config.allowUnfree = true;
 
