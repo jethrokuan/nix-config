@@ -8,8 +8,6 @@ let
     clj-refactor
     company-anaconda
     company-auctex
-    company-ghc
-    company-nixos-options
     company-tern
     counsel-projectile
     company-quickhelp
@@ -81,6 +79,7 @@ let
     web-mode
     wgrep
     which-key
+    yaml-mode
     yapfify
     zenburn-theme
   ] ++
