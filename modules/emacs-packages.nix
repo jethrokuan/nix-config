@@ -3,6 +3,7 @@
 let
   myPackages = (epkgs: (with epkgs.melpaPackages; [
     aggressive-indent
+    alchemist
     avy
     bury-successful-compilation
     clj-refactor
@@ -21,6 +22,7 @@ let
     dumb-jump
     easy-kill
     elfeed
+    elixir-mode
     emmet-mode
     eshell-git-prompt
     esup
@@ -72,6 +74,8 @@ let
     smartparens
     sos
     sphinx-doc
+    tide
+    typescript-mode
     use-package
     visual-regexp
     volatile-highlights
