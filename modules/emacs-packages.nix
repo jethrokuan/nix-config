@@ -3,6 +3,7 @@
 let
   myPackages = (epkgs: (with epkgs.melpaPackages; [
     aggressive-indent
+    all-the-icons-dired
     alchemist
     avy
     bury-successful-compilation
@@ -51,6 +52,7 @@ let
     json-mode
     keyfreq
     magit
+    magithub
     markdown-mode
     move-text
     nix-mode
@@ -58,6 +60,7 @@ let
     no-littering
     org-pomodoro
     paradox
+    pdf-tools
     peep-dired
     projectile
     py-isort    pytest
