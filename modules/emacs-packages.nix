@@ -67,7 +67,7 @@ let
     projectile
     py-isort    pytest
     rainbow-delimiters
-    rainbow-mode
+    # rainbow-mode
     rg
     rjsx-mode
     rust-mode
