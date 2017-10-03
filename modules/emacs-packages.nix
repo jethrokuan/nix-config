@@ -7,6 +7,7 @@ let
     alchemist
     avy
     bury-successful-compilation
+    challenger-deep-theme
     clj-refactor
     company-anaconda
     company-auctex
@@ -58,6 +59,7 @@ let
     nix-mode
     nix-sandbox
     no-littering
+    org-bullets
     org-pomodoro
     paradox
     pdf-tools
@@ -65,7 +67,7 @@ let
     projectile
     py-isort    pytest
     rainbow-delimiters
-    # rainbow-mode
+    rainbow-mode
     rg
     rjsx-mode
     rust-mode
