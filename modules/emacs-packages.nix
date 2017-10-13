@@ -21,6 +21,8 @@ let
     dired-narrow
     dired-ranger
     direnv
+    docker-mode
+    docker-file-mode
     dumb-jump
     easy-kill
     elfeed
@@ -61,6 +63,7 @@ let
     no-littering
     org-bullets
     org-pomodoro
+    ox-ioslide
     paradox
     pdf-tools
     peep-dired
@@ -87,6 +90,7 @@ let
     vue-mode
     web-mode
     wgrep
+    ws-butler
     which-key
     yaml-mode
     yapfify
