@@ -20,12 +20,14 @@ let
     dired-k
     dired-narrow
     dired-ranger
+    dired-subtree
     direnv
-    docker-mode
-    docker-file-mode
+    docker
+    dockerfile-mode
     dumb-jump
     easy-kill
     elfeed
+    elfeed-org
     elixir-mode
     emmet-mode
     eshell-git-prompt
