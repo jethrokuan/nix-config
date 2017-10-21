@@ -3,7 +3,7 @@
 let
   myPackages = (epkgs: (with epkgs.melpaPackages; [
     aggressive-indent
-    all-the-icons-dired
+    # all-the-icons-dired
     alchemist
     avy
     bury-successful-compilation

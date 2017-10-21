@@ -10,7 +10,7 @@
       source-sans-pro
       source-serif-pro
       nerdfonts
-      emacs-all-the-icons-fonts
+      # emacs-all-the-icons-fonts
     ];
 
     fontconfig = {
