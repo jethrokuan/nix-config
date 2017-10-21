@@ -46,10 +46,9 @@ in {
     gnome3.gvfs
   ];
 
+  services.xserver.desktopManager.gnome3.enable =true;
   services.xserver.desktopManager.xterm.enable = false;
   services.xserver.windowManager.stumpwm.enable = true;
-
-  services.gnome3.gvfs.enable = true;
 
   services.compton = {
     enable = true;
