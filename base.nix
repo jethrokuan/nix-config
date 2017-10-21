@@ -30,6 +30,7 @@
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  hardware.pulseaudio.enable = true;
   hardware.opengl.driSupport32Bit = true;
   nixpkgs.config.allowUnfree = true;
 
