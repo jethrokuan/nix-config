@@ -56,7 +56,7 @@ let
     js-doc
     js2-refactor
     json-mode
-    keychord
+    key-chord
     keyfreq
     magit
     # magithub
