@@ -52,17 +52,19 @@ let
     interleave
     intero
     isend-mode
+    ivy-bibtex
     js-doc
     js2-refactor
     json-mode
     keyfreq
     magit
-    magithub
+    # magithub
     markdown-mode
     move-text
     nix-mode
     nix-sandbox
     no-littering
+    org-ref
     org-bullets
     org-pomodoro
     ox-ioslide
@@ -70,7 +72,8 @@ let
     pdf-tools
     peep-dired
     projectile
-    py-isort    pytest
+    py-isort
+    pytest
     rainbow-delimiters
     # rainbow-mode
     rg
