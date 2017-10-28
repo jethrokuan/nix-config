@@ -65,6 +65,7 @@ let
     nix-mode
     nix-sandbox
     no-littering
+    olivetti
     org-ref
     org-bullets
     org-pomodoro
@@ -104,7 +105,6 @@ let
   ] ++
   [
     epkgs.org-plus-contrib
-    epkgs.darkroom
   ]));
 in
 {
