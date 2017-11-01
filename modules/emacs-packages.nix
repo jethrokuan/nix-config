@@ -86,6 +86,7 @@ let
     shm
     skewer-mode
     slime-company
+    smart-mode-line
     smartparens
     sos
     sphinx-doc
