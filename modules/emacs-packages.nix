@@ -68,6 +68,7 @@ let
     olivetti
     org-ref
     org-bullets
+    org-download
     org-pomodoro
     ox-ioslide
     paradox
