@@ -30,6 +30,7 @@ let
     elfeed-org
     elixir-mode
     emmet-mode
+    ensime
     eshell-git-prompt
     esup
     eww-lnum
