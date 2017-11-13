@@ -5,7 +5,8 @@
     direnv
     wget
     aspell
-    gitAndTools.gitFull      
+    aspellDicts.en
+    gitAndTools.gitFull
     ripgrep
     fzf
     less
@@ -15,5 +16,7 @@
     pass
     stow
     nox
+    scrot
+    xclip
   ];
 }
