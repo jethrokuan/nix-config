@@ -108,6 +108,7 @@ let
   ] ++
   [
     epkgs.org-plus-contrib
+    epkgs.rainbow-mode
   ]));
 in
 {
