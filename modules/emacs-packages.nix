@@ -47,6 +47,7 @@ let
     guru-mode
     haskell-mode
     highlight-indent-guides
+    htmlize
     ibuffer-projectile
     iedit
     indium
@@ -93,6 +94,7 @@ let
     sos
     sphinx-doc
     tide
+    tuareg
     typescript-mode
     use-package
     visual-regexp
