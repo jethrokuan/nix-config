@@ -17,6 +17,7 @@ let
     crux
     deft
     diff-hl
+    diminish
     dired-k
     dired-narrow
     dired-ranger
@@ -42,6 +43,7 @@ let
     flycheck-clojure
     flycheck-color-mode-line
     flycheck-pos-tip
+    gradle-mode
     go-mode
     golden-ratio
     guru-mode
@@ -94,7 +96,6 @@ let
     sos
     sphinx-doc
     tide
-    tuareg
     typescript-mode
     use-package
     visual-regexp
