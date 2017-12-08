@@ -16,7 +16,7 @@
     pass
     stow
     nox
-    scrot
+    maim
     xclip
   ];
 }
