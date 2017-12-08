@@ -7,8 +7,8 @@
       # Include desktop specific configuration
       /etc/nixos/extra.nix
 
-      ./modules/desktop-environment/stumpwm.nix
-      
+      ./modules/desktop-environment/ratpoison.nix
+
       # Modules
       ./modules/system-util.nix
       ./modules/fonts.nix
@@ -38,8 +38,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # networking.useDHCP = false;
-  # networking.wicd.enable = true;
   networking.networkmanager.enable = true;
 
   # Select internationalisation properties.
@@ -76,7 +74,7 @@
     };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "17.03";
+  system.stateVersion = "17.09";
 
   system.autoUpgrade = {
     enable = true;
