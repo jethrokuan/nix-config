@@ -1,7 +1,6 @@
 { config, pkgs, ...}:
 {
-  environment.systemPackages = [
-    pkgs.dropbox-cli
-    pkgs.dropbox
+  environment.systemPackages = with pkgs; [
+    dropbox
   ];
 }
