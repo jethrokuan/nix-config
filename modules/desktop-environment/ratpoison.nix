@@ -8,6 +8,7 @@
   environment.systemPackages = with pkgs; [
     dzen2
     conky
+    nitrogen
   ];
 
   services.xserver.desktopManager.gnome3.enable =true;
