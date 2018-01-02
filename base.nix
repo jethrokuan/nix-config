@@ -28,7 +28,7 @@
       ./modules/languages/java.nix
     ];
 
-  boot.kernelPackages = pkgs.linuxPackages_4_13;
+  boot.kernelPackages = pkgs.linuxPackages_latest;
 
   hardware.pulseaudio.enable = true;
   hardware.opengl.driSupport32Bit = true;
