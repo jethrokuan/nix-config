@@ -74,6 +74,7 @@ let
     org-bullets
     org-download
     org-pomodoro
+    org-table
     ox-ioslide
     paradox
     pdf-tools
