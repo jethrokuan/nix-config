@@ -8,9 +8,10 @@ let
 in
 {
   environment.systemPackages = [
-      emacs
+      # emacs
+      pkgs.emacs
   ];
 
-  services.emacs.package = emacs;
+  # services.emacs.package = emacs;
   services.emacs.enable = true;
 }
