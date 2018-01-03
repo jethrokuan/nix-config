@@ -19,7 +19,6 @@
       ./modules/dropbox.nix
       ./modules/pdf.nix
       ./modules/archiver.nix
-      ./modules/mail.nix
       ./modules/udiskie.nix
       ./modules/udev.nix
       ./modules/email.nix
