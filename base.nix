@@ -21,7 +21,7 @@
       ./modules/archiver.nix
       ./modules/udiskie.nix
       ./modules/udev.nix
-      ./modules/email.nix
+      # ./modules/email.nix
 
       # Languages
       ./modules/languages/java.nix
