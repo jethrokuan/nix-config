@@ -69,10 +69,12 @@ let
     nix-mode
     nix-sandbox
     no-littering
+    notmuch
     olivetti
     org-ref
     org-bullets
     org-download
+    org-notmuch
     org-pomodoro
     ox-ioslide
     paradox
