@@ -1,10 +1,5 @@
 { config, pkgs, ... }:
 {
-  imports = [
-    # Compositor
-    ./compton.nix
-  ];
-
   environment.systemPackages = with pkgs; [
     dzen2
     conky
