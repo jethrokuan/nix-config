@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
 {
+  imports = [
+    # Compositor
+    ../modules/desktop-environment/compton.nix
+  ];
+
   # Setup to support wireless driver
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "fuse" "kvm-intel" "rt2800usb" ];
