@@ -1,6 +1,7 @@
 {config, pkgs, ...}:
 {
   environment.systemPackages = with pkgs; [
+    pass
     isyncUnstable
     msmtp
     notmuch
@@ -16,10 +17,10 @@
   	      ExecStart = "${pkgs.isyncUnstable}/bin/mbsync -aq";
   	    };
 
-  	    path = [ pkgs.gawk pkgs.gnupg ];
+  	    path = with pkgs; [gawk gnupg pass];
 
   	    after = [ "network-online.target" "gpg-agent.service" ];
-        wantedBy    = [ "default.target" ];
+        wantedBy = [ "default.target" ];
       };
     };
 
