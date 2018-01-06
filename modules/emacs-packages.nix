@@ -74,7 +74,6 @@ let
     org-ref
     org-bullets
     org-download
-    org-notmuch
     org-pomodoro
     ox-ioslide
     paradox
@@ -112,7 +111,7 @@ let
     zenburn-theme
   ] ++
   [
-    epkgs.org-plus-contrib
+    epkgs.orgPackages.org-plus-contrib
     epkgs.rainbow-mode
   ]));
 in
