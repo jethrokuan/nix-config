@@ -11,6 +11,6 @@ in
       emacs
   ];
 
-  # services.emacs.package = emacs;
+  services.emacs.package = emacs;
   services.emacs.enable = true;
 }
