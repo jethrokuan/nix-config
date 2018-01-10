@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    gnumake
     direnv
     wget
     aspell
