@@ -5,6 +5,7 @@ let
     aggressive-indent
     # all-the-icons-dired
     alchemist
+    autodisass-java-bytecode
     avy
     bury-successful-compilation
     challenger-deep-theme
@@ -46,7 +47,7 @@ let
     gradle-mode
     go-mode
     golden-ratio
-    guru-mode
+    google-c-style
     haskell-mode
     highlight-indent-guides
     htmlize
@@ -65,6 +66,7 @@ let
     magit
     # magithub
     markdown-mode
+    meghanada
     move-text
     nix-mode
     nix-sandbox
