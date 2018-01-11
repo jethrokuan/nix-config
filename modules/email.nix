@@ -29,7 +29,7 @@
         description = "Mailbox syncronization";
 
         timerConfig = {
-          OnCalendar = "*:0/5";
+          OnCalendar = "*:0/2";
           Persistent = "true";
         };
         wantedBy = [ "timers.target" ];
