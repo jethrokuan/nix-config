@@ -28,6 +28,7 @@ let
     dockerfile-mode
     dumb-jump
     easy-kill
+    ein
     elfeed
     elfeed-org
     elixir-mode
