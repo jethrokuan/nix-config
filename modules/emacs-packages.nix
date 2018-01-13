@@ -3,10 +3,10 @@
 let
   myPackages = (epkgs: (with epkgs.melpaPackages; [
     aggressive-indent
-    # all-the-icons-dired
     alchemist
     autodisass-java-bytecode
     avy
+    beacon-mode
     bury-successful-compilation
     challenger-deep-theme
     clj-refactor
@@ -19,7 +19,6 @@ let
     deft
     diff-hl
     diminish
-    dired-k
     dired-narrow
     dired-ranger
     dired-subtree
