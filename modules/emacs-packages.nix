@@ -74,6 +74,7 @@ let
     nix-sandbox
     no-littering
     notmuch
+    nyan-mode
     olivetti
     org-ref
     org-download
