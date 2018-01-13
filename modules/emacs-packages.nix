@@ -35,7 +35,7 @@ let
     emmet-mode
     emojify
     ensime
-    eshell-git-prompt
+    esh-autosuggest
     esup
     eww-lnum
     expand-region
