@@ -33,6 +33,7 @@ let
     elfeed-org
     elixir-mode
     emmet-mode
+    emojify
     ensime
     eshell-git-prompt
     esup
@@ -75,7 +76,6 @@ let
     notmuch
     olivetti
     org-ref
-    org-bullets
     org-download
     org-pomodoro
     ox-ioslide
