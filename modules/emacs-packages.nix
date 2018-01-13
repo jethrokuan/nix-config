@@ -6,7 +6,7 @@ let
     alchemist
     autodisass-java-bytecode
     avy
-    beacon-mode
+    beacon
     bury-successful-compilation
     challenger-deep-theme
     clj-refactor
