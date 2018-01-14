@@ -77,6 +77,7 @@ let
     olivetti
     org-ref
     org-download
+    org-gcal
     org-pomodoro
     ox-ioslide
     paradox
