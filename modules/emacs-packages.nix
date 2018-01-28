@@ -12,6 +12,7 @@ let
     clj-refactor
     company-anaconda
     company-auctex
+    company-go
     company-tern
     counsel-projectile
     company-quickhelp
@@ -47,6 +48,9 @@ let
     flycheck-pos-tip
     gradle-mode
     go-mode
+    golint
+    go-dlv
+    gorepl-mode
     golden-ratio
     google-c-style
     haskell-mode
