@@ -4,6 +4,7 @@
     # shells
     bash
     fish
+    sakura
   ];
 
   environment.shells = [
