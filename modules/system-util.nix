@@ -19,5 +19,6 @@
     nox
     maim
     xclip
+    xdg_utils
   ];
 }
