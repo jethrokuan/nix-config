@@ -20,5 +20,6 @@
     maim
     xclip
     xdg_utils
+    gvfs
   ];
 }
