@@ -46,6 +46,7 @@ let
     flycheck-clojure
     flycheck-color-mode-line
     flycheck-pos-tip
+    gist
     gradle-mode
     go-mode
     golint
