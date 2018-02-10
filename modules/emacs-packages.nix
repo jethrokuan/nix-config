@@ -8,7 +8,6 @@ let
     avy
     beacon
     bury-successful-compilation
-    challenger-deep-theme
     clj-refactor
     company-anaconda
     company-auctex
@@ -28,19 +27,17 @@ let
     dockerfile-mode
     dumb-jump
     easy-kill
-    ein
     elfeed
     elfeed-org
     elixir-mode
     emmet-mode
-    emojify
     ensime
     esh-autosuggest
     esup
     eww-lnum
     expand-region
     eyebrowse
-    fancy-narrow
+    # feebleline
     fish-mode
     flx
     flycheck-clojure
@@ -68,17 +65,13 @@ let
     js2-refactor
     json-mode
     key-chord
-    keyfreq
     magit
-    # magithub
+    magithub
     markdown-mode
     meghanada
-    move-text
     nix-mode
-    nix-sandbox
     no-littering
     notmuch
-    nyan-mode
     olivetti
     org-ref
     org-download
@@ -92,7 +85,6 @@ let
     py-isort
     pytest
     rainbow-delimiters
-    # rainbow-mode
     rg
     rjsx-mode
     rust-mode
@@ -110,7 +102,6 @@ let
     use-package
     visual-regexp
     volatile-highlights
-    vue-mode
     web-mode
     wgrep
     ws-butler
