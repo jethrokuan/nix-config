@@ -66,7 +66,7 @@ let
     json-mode
     key-chord
     magit
-    magithub
+    # magithub
     markdown-mode
     meghanada
     nix-mode
