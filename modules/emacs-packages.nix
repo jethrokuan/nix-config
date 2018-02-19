@@ -76,6 +76,7 @@ let
     org-ref
     org-download
     org-gcal
+    org-journal
     org-pomodoro
     ox-ioslide
     paradox
