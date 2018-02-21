@@ -19,6 +19,7 @@ let
     deft
     diff-hl
     diminish
+    dimmer
     dired-narrow
     dired-ranger
     dired-subtree
