@@ -38,7 +38,7 @@ let
     eww-lnum
     expand-region
     eyebrowse
-    # feebleline
+    feebleline
     fish-mode
     flx
     flycheck-clojure
