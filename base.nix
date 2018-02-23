@@ -22,6 +22,7 @@
       ./modules/udiskie.nix
       ./modules/udev.nix
       ./modules/email.nix
+      ./modules/docker.nix
 
       # Languages
       ./modules/languages/java.nix
