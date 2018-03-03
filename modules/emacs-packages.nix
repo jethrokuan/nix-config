@@ -19,7 +19,6 @@ let
     deft
     diff-hl
     diminish
-    dimmer
     dired-narrow
     dired-ranger
     dired-subtree
@@ -38,7 +37,6 @@ let
     eww-lnum
     expand-region
     eyebrowse
-    feebleline
     fish-mode
     flx
     flycheck-clojure
