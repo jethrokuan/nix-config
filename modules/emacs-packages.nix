@@ -2,7 +2,6 @@
 
 let
   myPackages = (epkgs: (with epkgs.melpaPackages; [
-    aggressive-indent
     alchemist
     autodisass-java-bytecode
     avy
@@ -12,9 +11,10 @@ let
     company-anaconda
     company-auctex
     company-go
+    company-lsp
+    company-quickhelp
     company-tern
     counsel-projectile
-    company-quickhelp
     crux
     deft
     diff-hl
@@ -43,13 +43,13 @@ let
     flycheck-color-mode-line
     flycheck-pos-tip
     gist
-    gradle-mode
-    go-mode
-    golint
     go-dlv
-    gorepl-mode
+    go-mode
     golden-ratio
+    golint
     google-c-style
+    gorepl-mode
+    gradle-mode
     haskell-mode
     highlight-indent-guides
     htmlize
@@ -64,19 +64,22 @@ let
     js2-refactor
     json-mode
     key-chord
+    lsp-java
+    lsp-mode
+    lsp-python
+    lsp-ui
     magit
-    # magithub
     markdown-mode
     meghanada
     nix-mode
     no-littering
     notmuch
     olivetti
-    org-ref
     org-download
     org-gcal
     org-journal
     org-pomodoro
+    org-ref
     ox-ioslide
     paradox
     pdf-tools
@@ -104,11 +107,12 @@ let
     volatile-highlights
     web-mode
     wgrep
-    ws-butler
     which-key
+    ws-butler
     yaml-mode
     yapfify
     zenburn-theme
+aggressive-indent
   ] ++
   [
     epkgs.orgPackages.org-plus-contrib
