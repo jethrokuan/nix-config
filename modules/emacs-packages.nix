@@ -108,6 +108,7 @@ let
     web-mode
     wgrep
     which-key
+    writegood-mode
     ws-butler
     yaml-mode
     yapfify
