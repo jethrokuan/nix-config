@@ -2,6 +2,7 @@
 
 let
   myPackages = (epkgs: (with epkgs.melpaPackages; [
+    adoc-mode
     alchemist
     autodisass-java-bytecode
     avy
@@ -50,6 +51,7 @@ let
     google-c-style
     gorepl-mode
     gradle-mode
+    groovy-mode
     haskell-mode
     highlight-indent-guides
     htmlize
