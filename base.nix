@@ -8,6 +8,7 @@
       /etc/nixos/extra.nix
 
       ./modules/desktop-environment/ratpoison.nix
+      ./modules/desktop-environment/xfce.nix
 
       # Modules
       ./modules/system-util.nix
