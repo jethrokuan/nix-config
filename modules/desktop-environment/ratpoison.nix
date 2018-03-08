@@ -2,6 +2,7 @@
 {
   environment.systemPackages = with pkgs; [
     nitrogen
+    wmname
   ];
 
   services.xserver.desktopManager.gnome3.enable =true;
