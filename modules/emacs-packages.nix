@@ -9,6 +9,7 @@ let
     beacon
     bury-successful-compilation
     clj-refactor
+    color-identifiers-mode
     company-anaconda
     company-auctex
     company-go
@@ -102,6 +103,7 @@ let
     smartparens
     sos
     sphinx-doc
+    tao-theme
     tide
     typescript-mode
     use-package
