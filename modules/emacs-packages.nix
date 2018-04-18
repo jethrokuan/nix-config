@@ -3,6 +3,7 @@
 let
   myPackages = (epkgs: (with epkgs.melpaPackages; [
     adoc-mode
+    aggressive-indent
     alchemist
     autodisass-java-bytecode
     avy
@@ -16,6 +17,7 @@ let
     company-lsp
     company-quickhelp
     company-tern
+    counsel
     counsel-projectile
     crux
     deft
@@ -103,6 +105,7 @@ let
     smartparens
     sos
     sphinx-doc
+    swiper
     tao-theme
     tide
     typescript-mode
@@ -117,7 +120,6 @@ let
     yaml-mode
     yapfify
     zenburn-theme
-aggressive-indent
   ] ++
   [
     epkgs.orgPackages.org-plus-contrib
