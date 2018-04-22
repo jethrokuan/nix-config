@@ -25,7 +25,9 @@
       ./modules/docker.nix
 
       # Languages
-      ./modules/languages/java.nix
+      # ./modules/languages/java.nix
+
+      ./modules/overlays.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;

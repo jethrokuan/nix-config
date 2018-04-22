@@ -6,6 +6,4 @@
     ghostscript
     python27Packages.pygments
   ];
-
-  
 }
