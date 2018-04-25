@@ -4,13 +4,10 @@
     enableFontDir = true;
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
-      corefonts
       iosevka
       source-code-pro
       source-sans-pro
       source-serif-pro
-      nerdfonts
-      # emacs-all-the-icons-fonts
     ];
 
     fontconfig = {
