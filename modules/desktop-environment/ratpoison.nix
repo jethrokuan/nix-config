@@ -15,7 +15,6 @@
       name = "myRatpoison";
       start = ''
         ${pkgs.wmname}/bin/wmname LG3D &
-        ${pkgs.emacs}/bin/emacs --daemon &
         ${pkgs.dropbox}/bin/dropbox start &
         ${pkgs.nitrogen}/bin/nitrogen --restore &
         ${pkgs.ratpoison}/bin/ratpoison &
