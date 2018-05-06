@@ -11,6 +11,7 @@
 
       # Modules
       ./modules/system-util.nix
+      ./modules/networking.nix
       ./modules/fonts.nix
       ./modules/redshift.nix
       ./modules/shells.nix
