@@ -12,7 +12,7 @@
   services.xserver.windowManager.default = "myRatpoison";
   services.xserver.windowManager.session = [
     {
-      manage = "desktop";
+      manage = "window";
       name = "myRatpoison";
       start = ''
         ${pkgs.wmname}/bin/wmname LG3D &
