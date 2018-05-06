@@ -41,15 +41,6 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.networkmanager.enable = true;
-
-  # For VPN
-  environment.systemPackages = with pkgs; [
-    networkmanager_fortisslvpn
-    networkmanager_openvpn
-  ];
-
-
   # Select internationalisation properties.
    i18n = {
      consoleFont = "Lat2-Terminus16";
