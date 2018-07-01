@@ -29,6 +29,8 @@
       # ./modules/languages/java.nix
 
       ./modules/overlays.nix
+
+      ./modules/wine.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
