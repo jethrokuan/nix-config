@@ -8,6 +8,7 @@
       source-code-pro
       source-sans-pro
       source-serif-pro
+      et-book
     ];
 
     fontconfig = {
