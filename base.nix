@@ -30,7 +30,7 @@
 
       ./modules/overlays.nix
 
-      ./modules/wine.nix
+      # ./modules/wine.nix
     ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;

@@ -2,6 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    wine-staging
+    (wine-staging.override { wineBuild = "wineWow"; })
   ];
 }
