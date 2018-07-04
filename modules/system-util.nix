@@ -2,6 +2,7 @@
 
 {
   environment.systemPackages = with pkgs; [
+    ntfs3g
     gnumake
     direnv
     wget
