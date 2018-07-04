@@ -80,6 +80,7 @@ let
     no-littering
     notmuch
     olivetti
+    org-bullets
     org-download
     org-gcal
     org-journal
