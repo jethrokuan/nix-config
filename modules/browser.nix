@@ -5,8 +5,10 @@
     xfce.thunar
   ];
 
-  # nixpkgs.config.firefox.enableAdobeFlash = true;
-  nixpkgs.config.firefox.enableGoogleTalkPlugin = true;
+  nixpkgs.config.firefox = {
+    enableGoogleTalkPlugin = true;
+    enableAdobeFlash = true;
+  };
 
   environment.variables.BROWSER = pkgs.lib.mkOverride 0 "firefox";
 }
