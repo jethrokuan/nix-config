@@ -105,9 +105,10 @@ let
     smart-jump
     smart-mode-line
     smartparens
-    sos
+    # sos
     sphinx-doc
     swiper
+    sx
     tao-theme
     tide
     typescript-mode
