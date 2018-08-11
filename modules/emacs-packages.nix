@@ -29,7 +29,7 @@ let
     direnv
     docker
     dockerfile-mode
-    dumb-jump
+    # dumb-jump
     easy-kill
     elfeed
     elfeed-org
@@ -49,7 +49,7 @@ let
     gist
     go-dlv
     go-mode
-    golden-ratio
+    # golden-ratio
     golint
     google-c-style
     gorepl-mode
@@ -102,6 +102,7 @@ let
     shm
     skewer-mode
     slime-company
+    smart-jump
     smart-mode-line
     smartparens
     sos
