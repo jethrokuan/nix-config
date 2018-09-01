@@ -6,9 +6,6 @@
     wmname
   ];
 
-  services.xserver.desktopManager.gnome3.enable =true;
-  services.xserver.desktopManager.default = "gnome3";
-
   services.xserver.windowManager.default = "myRatpoison";
   services.xserver.windowManager.session = [
     {
