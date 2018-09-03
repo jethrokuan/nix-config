@@ -21,6 +21,7 @@
     maim
     xclip
     xdg_utils
+    file
     gvfs
   ];
 }

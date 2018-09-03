@@ -6,6 +6,7 @@
     isyncUnstable
     msmtp
     notmuch
+    pinentry_qt5
   ];
 
   systemd.user =  {
