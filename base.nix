@@ -24,6 +24,7 @@
       ./modules/udev.nix
       ./modules/email.nix
       ./modules/docker.nix
+      ./modules/media.nix
 
       # Languages
       # ./modules/languages/java.nix
