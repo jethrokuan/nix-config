@@ -2,7 +2,6 @@
 {
   environment.systemPackages = with pkgs; [
     firefox
-    xfce.thunar
   ];
 
   nixpkgs.config.firefox = {

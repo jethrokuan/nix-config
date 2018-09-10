@@ -10,6 +10,7 @@
     aspellDicts.en
     gitAndTools.gitFull
     ripgrep
+    fd
     fzf
     less
     tree
