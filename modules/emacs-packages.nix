@@ -29,7 +29,7 @@ let
     direnv
     docker
     dockerfile-mode
-    # dumb-jump
+    dtrt-indent
     easy-kill
     elfeed
     elfeed-org
