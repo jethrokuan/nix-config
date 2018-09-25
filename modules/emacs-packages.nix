@@ -76,6 +76,8 @@ let
     magit
     markdown-mode
     meghanada
+    minions
+    moody
     nix-mode
     no-littering
     notmuch
