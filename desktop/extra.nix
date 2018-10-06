@@ -2,7 +2,7 @@
 {
   imports = [
     # Compositor
-    ../modules/desktop-environment/compton.nix
+    ../modules/wine.nix
   ];
 
   # Setup to support wireless driver
