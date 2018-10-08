@@ -46,10 +46,11 @@ let
     flycheck-clojure
     flycheck-color-mode-line
     flycheck-pos-tip
+    flyspell-correct
+    flyspell-correct-ivy
     gist
     go-dlv
     go-mode
-    # golden-ratio
     golint
     google-c-style
     gorepl-mode
@@ -97,7 +98,6 @@ let
     pytest
     rainbow-delimiters
     rg
-    rjsx-mode
     rust-mode
     scss-mode
     shackle
@@ -124,7 +124,6 @@ let
     ws-butler
     yaml-mode
     yapfify
-    zenburn-theme
   ] ++
   [
     epkgs.orgPackages.org-plus-contrib
