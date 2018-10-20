@@ -9,6 +9,7 @@
       source-sans-pro
       source-serif-pro
       etBook
+      ia-writer-duospace
     ];
 
     fontconfig = {
