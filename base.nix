@@ -17,13 +17,13 @@
       ./modules/shells.nix
       ./modules/emacs.nix
       ./modules/browser.nix
-      # ./modules/dropbox.nix
+      ./modules/dropbox.nix
       ./modules/pdf.nix
       ./modules/archiver.nix
       ./modules/udiskie.nix
       ./modules/udev.nix
       ./modules/email.nix
-      ./modules/docker.nix
+      # ./modules/docker.nix
       ./modules/media.nix
 
       # Languages
