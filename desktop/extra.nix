@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
   imports = [
-    # Compositor
     ../modules/wine.nix
+    # ../modules/steam.nix
   ];
 
   # Setup to support wireless driver
