@@ -94,7 +94,7 @@ let
     org-ref
     ox-ioslide
     paradox
-    # pdf-tools
+    pdf-tools
     peep-dired
     prettier-js
     projectile
