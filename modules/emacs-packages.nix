@@ -86,6 +86,7 @@ let
     notmuch
     olivetti
     org-bullets
+    org-cliplink
     org-download
     org-gcal
     org-journal
