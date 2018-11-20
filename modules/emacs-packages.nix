@@ -49,6 +49,7 @@ let
     flyspell-correct
     flyspell-correct-ivy
     gist
+    git-link
     go-dlv
     go-mode
     golint
@@ -71,6 +72,7 @@ let
     json-mode
     key-chord
     lsp-java
+    lsp-javascript-typescript
     lsp-mode
     lsp-python
     lsp-ui
@@ -93,6 +95,7 @@ let
     paradox
     # pdf-tools
     peep-dired
+    prettier-js
     projectile
     py-isort
     pytest
