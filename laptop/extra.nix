@@ -1,5 +1,7 @@
 {config, pkgs, ... }:
 {
   boot.kernelModules = [ "fuse" ];
-  networking.hostName = "jethro-laptop"; # Define your hostname.
+  networking.hostName = "jethro-laptop";
+
+  services.upower.enable = true;
 }
