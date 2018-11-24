@@ -2,27 +2,30 @@
 
 {
   environment.systemPackages = with pkgs; [
-    ntfs3g
-    gnumake
-    direnv
-    wget
     aspell
     aspellDicts.en
-    gitAndTools.gitFull
-    ripgrep
+    direnv
     fd
+    file
     fzf
+    gitAndTools.gitFull
+    gnumake
+    gvfs
     less
-    tree
+    maim
+    nox
+    ntfs3g
+    pass
+    ripgrep
     rofi
     rofi-pass
-    pass
     stow
-    nox
-    maim
+    tree
+    wget
     xclip
     xdg_utils
-    file
-    gvfs
+    aria2
   ];
+
+  services.aria2.enable = true;
 }
