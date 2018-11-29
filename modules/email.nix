@@ -3,19 +3,21 @@
 {
   environment.systemPackages = with pkgs; [
     pass
-    isyncUnstable
+    isync
     msmtp
     notmuch
     pinentry_qt5
   ];
 
-  systemd.user =  {
+  programs.gnupg.agent.enable = true;
+
+  systemd.user = {
     services.mbsync = {
       description = "Mailbox syncronization";
 
   	  serviceConfig = {
   	    Type = "oneshot";
-  	    ExecStart = "${pkgs.isyncUnstable}/bin/mbsync -aq";
+  	    ExecStart = "${pkgs.isync}/bin/mbsync -aq";
   	  };
 
   	  path = with pkgs; [gawk gnupg pass];
