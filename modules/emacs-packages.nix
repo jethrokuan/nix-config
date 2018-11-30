@@ -59,6 +59,7 @@ let
     groovy-mode
     haskell-mode
     highlight-indent-guides
+    hl-todo
     htmlize
     ibuffer-projectile
     iedit
@@ -111,7 +112,6 @@ let
     smart-jump
     smart-mode-line
     smartparens
-    # sos
     sphinx-doc
     swiper
     sx
