@@ -8,6 +8,7 @@ in
 {
   environment.systemPackages = [
       emacs
+      pkgs.proselint  #  linter for prose
   ];
 
   services.emacs.package = emacs;
