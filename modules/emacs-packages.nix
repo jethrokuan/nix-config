@@ -1,7 +1,9 @@
 { pkgs, ... }:
 
 let
-  myPackages = (epkgs: (with epkgs.melpaPackages; [
+myPackages = (epkgs: (
+  with epkgs.melpaPackages; [
+    epkgs.emacs-libvterm
     adoc-mode
     aggressive-indent
     alchemist
