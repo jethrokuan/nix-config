@@ -34,6 +34,12 @@
       # ./modules/wine.nix
     ];
 
+  nix.nixPath = [
+    "nixpkgs=/home/jethro/nix-config/nixpkgs"
+    "nixos-config=/home/jethro/nix-config/base.nix"
+    "/nix/var/nix/profiles/per-user/channels"
+  ];
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   hardware.pulseaudio = {
