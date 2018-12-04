@@ -119,6 +119,7 @@ myPackages = (epkgs: (
     sx
     tao-theme
     tide
+    tuareg
     typescript-mode
     use-package
     visual-regexp
