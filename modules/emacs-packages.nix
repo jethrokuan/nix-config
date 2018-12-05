@@ -95,6 +95,7 @@ myPackages = (epkgs: (
     org-journal
     org-pomodoro
     org-ref
+    ox-hugo
     ox-ioslide
     paradox
     pdf-tools
