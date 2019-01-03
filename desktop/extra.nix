@@ -17,4 +17,10 @@
   networking.hostName = "jethro-desktop"; # Define your hostname.
 
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  environment.systemPackages = with pkgs; [
+    steam
+    s-tui # for monitoring temps
+    calibre
+  ];
 }
