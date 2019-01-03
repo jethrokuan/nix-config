@@ -1,0 +1,13 @@
+* Setting Up
+
+Symlink the correct extra.nix to base directory:
+
+#+BEGIN_SRC bash
+  ln -s desktop/extra.nix  ./extra.nix
+#+END_SRC
+
+Run ~nixos-rebuild~ pointing to the correct nixpkgs and nixos-config:
+
+#+BEGIN_SRC bash
+  sudo nixos-rebuild -I nixpkgs=/home/jethro/nix-config/nixpkgs -I nixos-config=/home/jethro/nix-config/base.nix switch
+#+END_SRC

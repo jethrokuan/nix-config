@@ -5,7 +5,7 @@
     [ # Include the results of the hardware scan.
       /etc/nixos/hardware-configuration.nix
       # Include desktop specific configuration
-      /etc/nixos/extra.nix
+      ./extra.nix
 
       ./modules/desktop-environment/ratpoison.nix
 
