@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     pass
+    gnupg
     isync
     msmtp
     notmuch
