@@ -39,6 +39,7 @@ myPackages = (epkgs: (
     emmet-mode
     ensime
     esh-autosuggest
+    ess
     esup
     eww-lnum
     expand-region
