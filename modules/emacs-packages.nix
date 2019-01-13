@@ -51,6 +51,7 @@ myPackages = (epkgs: (
     flycheck-pos-tip
     flyspell-correct
     flyspell-correct-ivy
+    forge
     gist
     git-link
     go-dlv
@@ -86,6 +87,7 @@ myPackages = (epkgs: (
     minions
     moody
     nix-mode
+    nix-update
     no-littering
     notmuch
     olivetti
@@ -116,7 +118,7 @@ myPackages = (epkgs: (
     smart-jump
     smart-mode-line
     smartparens
-    sphinx-doc
+    # sphinx-doc
     swiper
     sx
     tao-theme
