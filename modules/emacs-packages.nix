@@ -12,6 +12,8 @@ myPackages = (epkgs: (
     beacon
     bury-successful-compilation
     clj-refactor
+    cmake-mode
+    cquery
     color-identifiers-mode
     company-anaconda
     company-auctex
@@ -119,6 +121,8 @@ myPackages = (epkgs: (
     smart-mode-line
     smartparens
     # sphinx-doc
+    srefactor
+    stickyfunc-enhance
     swiper
     sx
     tao-theme
