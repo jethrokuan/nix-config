@@ -89,6 +89,7 @@ myPackages = (epkgs: (
     minions
     moody
     nix-mode
+    nix-buffer
     nix-update
     no-littering
     notmuch
