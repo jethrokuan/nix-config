@@ -9,11 +9,9 @@
     file
     fzf
     gitAndTools.gitFull
-    gnumake
     gvfs
     less
     maim
-    nox
     ntfs3g
     pass
     ripgrep
@@ -24,8 +22,5 @@
     wget
     xclip
     xdg_utils
-    aria2
   ];
-
-  services.aria2.enable = true;
 }
