@@ -11,9 +11,9 @@ myPackages = (epkgs: (
     avy
     beacon
     bury-successful-compilation
+    ccls
     clj-refactor
     cmake-mode
-    cquery
     color-identifiers-mode
     company-anaconda
     company-auctex
