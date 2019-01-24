@@ -6,17 +6,11 @@
     wmname
   ];
 
-  services.xserver.windowManager.default = "myRatpoison";
-  services.xserver.windowManager.session = [
-    {
-      manage = "window";
-      name = "myRatpoison";
-      start = ''
-        ${pkgs.wmname}/bin/wmname LG3D &
-        ${pkgs.nitrogen}/bin/nitrogen --restore &
-        ${pkgs.ratpoison}/bin/ratpoison &
-        waitPID=$!
-      '';
-    }
-  ];
+  services.xserver.windowManager.ratpoison.enable = true;
+
+  services.xserver.displayManager.sessionCommands = with pkgs; lib.mkAfter
+    ''
+      ${wmname}/bin/wmname LG3D &
+      ${nitrogen}/bin/nitrogen --restore &
+    '';
 }
