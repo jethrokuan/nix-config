@@ -7,7 +7,7 @@
 
   # Setup to support wireless driver
   boot.kernelPackages = pkgs.linuxPackages_latest;
-  boot.kernelModules = [ "fuse" "kvm-intel" ];
+  boot.kernelModules = [ "fuse" "kvm-intel" "coretemp" ];
 
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
@@ -19,6 +19,7 @@
   services.xserver.videoDrivers = [ "nvidia" ];
 
   environment.systemPackages = with pkgs; [
+    lm_sensors
     steam
     s-tui # for monitoring temps
     calibre
