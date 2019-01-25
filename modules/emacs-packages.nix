@@ -24,6 +24,7 @@ myPackages = (epkgs: (
     counsel
     counsel-projectile
     crux
+    dap-mode
     deft
     diff-hl
     diminish
