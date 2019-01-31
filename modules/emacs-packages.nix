@@ -112,6 +112,7 @@ myPackages = (epkgs: (
     py-isort
     pytest
     rainbow-delimiters
+    realgud
     rg
     rust-mode
     scss-mode
