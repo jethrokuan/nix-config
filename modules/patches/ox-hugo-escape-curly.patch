@@ -1,0 +1,85 @@
+From b31105a11e91d5da0be4b97bcebe8aa2fb64d4d7 Mon Sep 17 00:00:00 2001
+From: Kaushal Modi <kaushal.modi@gmail.com>
+Date: Thu, 7 Feb 2019 13:18:00 -0500
+Subject: [PATCH] Fix the escaping of \{ and \} for Blackfriday parsing to work
+
+Fixes https://github.com/kaushalmodi/ox-hugo/issues/258.
+---
+ ox-blackfriday.el                                        | 6 ++++--
+ test/site/content-org/all-posts.org                      | 6 ++++++
+ test/site/content/posts/equations-bf-escaping.md         | 9 +++++++++
+ .../real-examples/multifractals-in-ecology-using-r.md    | 2 +-
+ test/site/themes/hugo-bare-min-theme                     | 2 +-
+ 5 files changed, 21 insertions(+), 4 deletions(-)
+
+diff --git a/ox-blackfriday.el b/ox-blackfriday.el
+index 2900a67..1227b39 100644
+--- a/ox-blackfriday.el
++++ b/ox-blackfriday.el
+@@ -298,6 +298,8 @@ Blackfriday happy.  So:
+   \"\\)\" -> \"\\\\)\"
+   \"\\\\=[\" -> \"\\\\\\=[\"
+   \"\\\\=]\" -> \"\\\\\\=]\"
++  \"\\\\={\" -> \"\\\\\\={\"
++  \"\\\\=}\" -> \"\\\\\\=}\"
+   \"\\|\" -> \"\\\\|\"
+ 
+ and finally:
+@@ -307,8 +309,8 @@ and finally:
+          (escaped-str (replace-regexp-in-string "[_*]" "\\\\\\&" str))
+          ;; (c) -> ( c), (r) -> ( r), (tm) -> ( tm)
+          (escaped-str (replace-regexp-in-string "(\\(c\\|r\\|tm\\))" "( \\1)" escaped-str))
+-         ;; \( -> \\(, \) -> \\), \[ -> \\[, \] -> \\], \| -> \\|
+-         (escaped-str (replace-regexp-in-string "\\(\\\\[]()[|]\\)" "\\\\\\1" escaped-str))
++         ;; \( -> \\(, \) -> \\), \[ -> \\[, \] -> \\], \{ -> \\{, \} -> \\}, \| -> \\|
++         (escaped-str (replace-regexp-in-string "\\(\\\\[](){}[|]\\)" "\\\\\\1" escaped-str))
+          (escaped-str (replace-regexp-in-string
+                        "\\([^\\]\\)\\\\\\{2\\}[[:blank:]]*$" ;Replace "\\" at EOL with:
+                        "\\1\\\\\\\\\\\\\\\\\\\\\\\\"             ;"\\\\\\"
+diff --git a/test/site/content-org/all-posts.org b/test/site/content-org/all-posts.org
+index 0f85870..d19866b 100644
+--- a/test/site/content-org/all-posts.org
++++ b/test/site/content-org/all-posts.org
+@@ -3107,6 +3107,12 @@ a^3  &=  σ(W^3a^2 + b^3)\\
+ a^L  &= σ(W^La^{L-1} + b^L)\\
+ y  &= a^L\\
+ \end{align}
++*** =\{= → =\\{=, =\}= → =\\}=
++{{{oxhugoissue(258)}}}
++
++\begin{equation}
++\phi_j(x) = \mathrm{exp}\left\{ - \frac{(x - \mu_j)^2}{2s^2} \right\}
++\end{equation}
+ * Lists                                                               :lists:
+ ** List following a list
+ :PROPERTIES:
+diff --git a/test/site/content/posts/equations-bf-escaping.md b/test/site/content/posts/equations-bf-escaping.md
+index 8e38489..4a20cc4 100644
+--- a/test/site/content/posts/equations-bf-escaping.md
++++ b/test/site/content/posts/equations-bf-escaping.md
+@@ -38,3 +38,12 @@ a^3  &=  σ(W^3a^2 + b^3)\\\\\\
+ a^L  &= σ(W^La^{L-1} + b^L)\\\\\\
+ y  &= a^L\\\\\\
+ \end{align}
++
++
++## `\{` → `\\{`, `\}` → `\\}` {#}
++
++`ox-hugo` Issue #[258](https://github.com/kaushalmodi/ox-hugo/issues/258)
++
++\begin{equation}
++\phi\_j(x) = \mathrm{exp}\left\\{ - \frac{(x - \mu\_j)^2}{2s^2} \right\\}
++\end{equation}
+diff --git a/test/site/content/real-examples/multifractals-in-ecology-using-r.md b/test/site/content/real-examples/multifractals-in-ecology-using-r.md
+index e074822..98d71bf 100644
+--- a/test/site/content/real-examples/multifractals-in-ecology-using-r.md
++++ b/test/site/content/real-examples/multifractals-in-ecology-using-r.md
+@@ -30,6 +30,6 @@ Disclaimer
+ 
+ -   Consider a given object \\(\Omega\\), its multifractal nature is
+     practically determined by covering the system with a set of boxes
+-    \\(\{B\_i( r)\}\\) with \\((i=1,..., N( r))\\) of side length \\(r\\)
++    \\(\\{B\_i( r)\\}\\) with \\((i=1,..., N( r))\\) of side length \\(r\\)
+ -   These boxes are nonoverlaping and such that
+ 
+     \\[\Omega = \bigcup\_{i=1}^{N( r)} B\_i( r)\\]

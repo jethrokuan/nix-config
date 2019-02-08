@@ -1,9 +1,18 @@
 { pkgs, ... }:
 
 let
-  emacsWithPackages = (pkgs.emacsPackagesNgGen pkgs.emacs).emacsWithPackages;
+  inherit (pkgs) stdenv;
+  inherit (stdenv) lib;
+
+  withPatches = pkg: patches:
+    lib.overrideDerivation pkg (attrs: { inherit patches; });
+
+  customEmacsPackages = pkgs.emacsPackagesNg.overrideScope' (self: super: super // {
+    ox-hugo = withPatches super.ox-hugo [ ./patches/ox-hugo-escape-curly.patch ];
+  });
+
   myPackages = import ./emacs-packages.nix;
-  emacs = emacsWithPackages myPackages;
+  emacs = customEmacsPackages.emacsWithPackages myPackages;
 in
 {
   environment.systemPackages = [
