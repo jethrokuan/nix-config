@@ -2,7 +2,7 @@
 
 let
   emacsWithPackages = (pkgs.emacsPackagesNgGen pkgs.emacs).emacsWithPackages;
-  inherit (import ./emacs-packages.nix {inherit pkgs;}) myPackages;
+  myPackages = import ./emacs-packages.nix;
   emacs = emacsWithPackages myPackages;
 in
 {

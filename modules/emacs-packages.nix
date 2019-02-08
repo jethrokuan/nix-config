@@ -1,7 +1,4 @@
-{ pkgs, ... }:
-
-let
-myPackages = (epkgs: (
+epkgs: (
   with epkgs.melpaPackages; [
     epkgs.emacs-libvterm
     adoc-mode
@@ -146,8 +143,4 @@ myPackages = (epkgs: (
   [
     epkgs.orgPackages.org-plus-contrib
     epkgs.rainbow-mode
-  ]));
-in
-{
-  myPackages = myPackages;
-}
+  ])
