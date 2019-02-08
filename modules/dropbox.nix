@@ -1,20 +1,27 @@
-{ config, pkgs, ...}:
+{ config, lib, pkgs, ... }:
+
 {
   environment.systemPackages = with pkgs; [
+    # dropbox - we don't need this in the environment. systemd unit pulls it in
     dropbox-cli
   ];
 
   systemd.user.services.dropbox = {
-    enable = true;
-    description = "Dropbox service";
+    description = "Dropbox";
     after = [ "network.target" ];
-    wantedBy = [ "default.target" ];
-    path = with pkgs; [dropbox-cli];
+    wantedBy = [ "graphical-session.target" ];
+    environment = {
+      QT_PLUGIN_PATH = "/run/current-system/sw/" + pkgs.qt5.qtbase.qtPluginPrefix;
+      QML2_IMPORT_PATH = "/run/current-system/sw/" + pkgs.qt5.qtbase.qtQmlPrefix;
+    };
     serviceConfig = {
-      Type = "forking";
-      PIDFile = "%h/.dropbox/dropbox.pid";
-      ExecStart = "${pkgs.dropbox-cli}/bin/dropbox start";
-      ExecStop = "${pkgs.dropbox-cli}/bin/dropbox stop";
+      ExecStart = "${pkgs.dropbox.out}/bin/dropbox";
+      ExecReload = "${pkgs.coreutils.out}/bin/kill -HUP $MAINPID";
+      KillMode = "control-group"; # upstream recommends process
+      Restart = "on-failure";
+      PrivateTmp = true;
+      ProtectSystem = "full";
+      Nice = 10;
     };
   };
 }
