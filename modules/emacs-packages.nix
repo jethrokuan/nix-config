@@ -13,6 +13,7 @@ epkgs: with epkgs; [
   color-identifiers-mode
   company-anaconda
   company-auctex
+  company-prescient
   company-go
   company-lsp
   company-quickhelp
@@ -71,6 +72,7 @@ epkgs: with epkgs; [
   intero
   isend-mode
   ivy-bibtex
+  ivy-prescient
   js-doc
   js2-refactor
   json-mode
@@ -108,7 +110,6 @@ epkgs: with epkgs; [
   py-isort
   pytest
   rainbow-delimiters
-  realgud
   rg
   rust-mode
   scss-mode
@@ -119,7 +120,6 @@ epkgs: with epkgs; [
   smart-jump
   smart-mode-line
   smartparens
-  # sphinx-doc
   srefactor
   stickyfunc-enhance
   swiper
@@ -139,5 +139,5 @@ epkgs: with epkgs; [
   yaml-mode
   yapfify
   rainbow-mode
-  orgPackages.org-plus-contrib
+  org-plus-contrib
 ]
