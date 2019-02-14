@@ -17,9 +17,9 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "indocomsoft";
     repo = "fluminurs";
-    rev = "bf56aebdfee84521957440035866b6ad51d1bee7";
-    sha256 = "1cjkgl5lr4r20v3cvk407i31hqnq2v9qk7jbf7lavim4zljsgnz1";
-    # date = 2019-02-15T01:34:54+08:00;
+    rev = "046c4549393c1a57a95a5c36299d687c88898c7a";
+    sha256 = "1kj5c96v2dnxy11an9xl6i820g6vhnp6a179k1vymcpnkzl6hvw2";
+    # date = 2019-02-15T02:20:39+08:00;
   };
 
   cargoSha256 = "02bd26kpfcbqk1dk85f823228ki6nhvqjhwkkggg1vk4irg3za6b";
