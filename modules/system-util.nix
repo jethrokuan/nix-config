@@ -1,5 +1,8 @@
 {config, pkgs, ...}:
 
+let
+  fluminurs = pkgs.callPackage ../custom/fluminurs.nix {} ;
+in
 {
   environment.systemPackages = with pkgs; [
     aspell
@@ -22,5 +25,7 @@
     wget
     xclip
     xdg_utils
+
+    fluminurs # API for Luminus
   ];
 }
