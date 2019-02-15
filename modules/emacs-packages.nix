@@ -51,6 +51,7 @@ epkgs: with epkgs; [
   flycheck-pos-tip
   flyspell-correct
   flyspell-correct-ivy
+  focus
   forge
   gist
   git-link
