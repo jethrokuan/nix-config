@@ -81,7 +81,6 @@ epkgs: with epkgs; [
   lsp-java
   lsp-javascript-typescript
   lsp-mode
-  lsp-python
   lsp-ui
   magit
   markdown-mode
