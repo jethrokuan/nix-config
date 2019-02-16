@@ -3,7 +3,7 @@
 with pkgs;
 rustPlatform.buildRustPackage rec {
   name = "fluminurs-${version}";
-  version = "0.1.0";
+  version = "0.1.1";
 
   nativeBuildInputs = [
     rustc cargo
@@ -17,9 +17,9 @@ rustPlatform.buildRustPackage rec {
   src = fetchFromGitHub {
     owner = "indocomsoft";
     repo = "fluminurs";
-    rev = "046c4549393c1a57a95a5c36299d687c88898c7a";
-    sha256 = "1kj5c96v2dnxy11an9xl6i820g6vhnp6a179k1vymcpnkzl6hvw2";
-    # date = 2019-02-15T02:20:39+08:00;
+    rev = "7876c38f34f45c08e55fda3f4c7b7c987d5a6261";
+    sha256 = "1i3d81613ad4njwf5fscx8cq0j9rbf2imikdwaaf6gzf8nxgm3lr";
+    # date = 2019-02-15T02:42:10+08:00;
   };
 
   cargoSha256 = "02bd26kpfcbqk1dk85f823228ki6nhvqjhwkkggg1vk4irg3za6b";
