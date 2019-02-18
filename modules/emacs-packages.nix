@@ -95,6 +95,7 @@ epkgs: with epkgs; [
   olivetti
   org-bullets
   org-cliplink
+  org-clock-convenience
   org-download
   org-gcal
   org-journal
