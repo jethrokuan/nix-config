@@ -3,6 +3,8 @@ epkgs: with epkgs; [
   adoc-mode
   aggressive-indent
   alchemist
+  all-the-icons
+  async
   autodisass-java-bytecode
   avy
   beacon
