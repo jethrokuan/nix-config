@@ -5,7 +5,6 @@ epkgs: with epkgs; [
   alchemist
   all-the-icons
   async
-  autodisass-java-bytecode
   avy
   beacon
   bury-successful-compilation
@@ -60,7 +59,6 @@ epkgs: with epkgs; [
   go-dlv
   go-mode
   golint
-  google-c-style
   gorepl-mode
   gradle-mode
   groovy-mode
@@ -79,7 +77,6 @@ epkgs: with epkgs; [
   js-doc
   js2-refactor
   json-mode
-  key-chord
   lsp-java
   lsp-javascript-typescript
   lsp-mode
@@ -105,7 +102,6 @@ epkgs: with epkgs; [
   org-ref
   ox-hugo
   ox-ioslide
-  paradox
   pdf-tools
   peep-dired
   prettier-js
@@ -123,21 +119,16 @@ epkgs: with epkgs; [
   smart-jump
   smart-mode-line
   smartparens
-  srefactor
-  stickyfunc-enhance
   swiper
-  sx
   tao-theme
   tide
   tuareg
   typescript-mode
   use-package
-  visual-regexp
   volatile-highlights
   web-mode
   wgrep
   which-key
-  writegood-mode
   ws-butler
   yaml-mode
   yapfify
