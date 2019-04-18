@@ -7,12 +7,12 @@ let
   withPatches = pkg: patches:
     lib.overrideDerivation pkg (attrs: { inherit patches; });
 
-  customEmacsPackages = pkgs.emacsPackagesNg.overrideScope' (self: super: super // {
-    ox-hugo = withPatches super.ox-hugo [ ./patches/ox-hugo-escape-curly.patch ];
-  });
+  myEmacs = pkgs.emacs.override { inherit (pkgs) imagemagick; };
+
+  emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
 
   myPackages = import ./emacs-packages.nix;
-  emacs = customEmacsPackages.emacsWithPackages myPackages;
+  emacs = emacsWithPackages myPackages;
 in
 {
   environment.systemPackages = [

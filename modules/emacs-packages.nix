@@ -78,7 +78,6 @@ epkgs: with epkgs; [
   js2-refactor
   json-mode
   lsp-java
-  lsp-javascript-typescript
   lsp-mode
   lsp-ui
   magit
