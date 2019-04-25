@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ../modules/wine.nix
-    # ../modules/steam.nix
+    # ../modules/wine.nix
+    ../modules/steam.nix
   ];
 
   # Setup to support wireless driver
@@ -18,10 +18,10 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  nix.buildCores = 4;
+
   environment.systemPackages = with pkgs; [
     lm_sensors
-    steam
-    s-tui # for monitoring temps
     calibre
   ];
 }
