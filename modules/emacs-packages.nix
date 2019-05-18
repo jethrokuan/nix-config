@@ -1,5 +1,4 @@
 epkgs: with epkgs; [
-  emacs-libvterm
   adoc-mode
   aggressive-indent
   alchemist
@@ -14,7 +13,6 @@ epkgs: with epkgs; [
   color-identifiers-mode
   company-anaconda
   company-auctex
-  company-prescient
   company-go
   company-lsp
   company-quickhelp
@@ -23,6 +21,7 @@ epkgs: with epkgs; [
   counsel-projectile
   crux
   dap-mode
+  deadgrep
   deft
   diff-hl
   diminish
@@ -37,6 +36,7 @@ epkgs: with epkgs; [
   elfeed
   elfeed-org
   elixir-mode
+  emacs-libvterm
   emmet-mode
   ensime
   esh-autosuggest
@@ -46,8 +46,6 @@ epkgs: with epkgs; [
   expand-region
   eyebrowse
   fish-mode
-  flx
-  flycheck-clojure
   flycheck-color-mode-line
   flycheck-pos-tip
   flyspell-correct
@@ -60,8 +58,6 @@ epkgs: with epkgs; [
   go-mode
   golint
   gorepl-mode
-  gradle-mode
-  groovy-mode
   haskell-mode
   highlight-indent-guides
   hl-todo
@@ -73,7 +69,6 @@ epkgs: with epkgs; [
   intero
   isend-mode
   ivy-bibtex
-  ivy-prescient
   js-doc
   js2-refactor
   json-mode
@@ -85,8 +80,8 @@ epkgs: with epkgs; [
   meghanada
   minions
   moody
-  nix-mode
   nix-buffer
+  nix-mode
   nix-update
   no-littering
   notmuch
@@ -97,6 +92,7 @@ epkgs: with epkgs; [
   org-download
   org-gcal
   org-journal
+  org-plus-contrib
   org-pomodoro
   org-ref
   ox-hugo
@@ -108,13 +104,12 @@ epkgs: with epkgs; [
   py-isort
   pytest
   rainbow-delimiters
-  rg
+  rainbow-mode
   rust-mode
   scss-mode
   shackle
   shm
   skewer-mode
-  slime-company
   smart-jump
   smart-mode-line
   smartparens
@@ -131,6 +126,4 @@ epkgs: with epkgs; [
   ws-butler
   yaml-mode
   yapfify
-  rainbow-mode
-  org-plus-contrib
 ]
