@@ -4,7 +4,7 @@
     # shells
     bash
     fish
-    kitty
+    alacritty
   ];
 
   environment.shells = [
