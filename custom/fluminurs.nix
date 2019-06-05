@@ -22,7 +22,7 @@ rustPlatform.buildRustPackage rec {
     # date = 2019-03-07T10:57:44+08:00;
   };
 
-  cargoSha256 = "0hacw8kdfyf3qpz0l6g01zsh0gsr6ysy5228z3i367svsqfzjsv7";
+  cargoSha256 = "0drgjnp8wvv0ap6l5x2ss88yp2lhli3wkf56gm0fbnyqq6s2ccpc";
 
   meta = with stdenv.lib; {
     description = "Luminus api";

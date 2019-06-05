@@ -2,7 +2,7 @@
 {
   imports = [
     # ../modules/wine.nix
-    # ../modules/steam.nix
+    ../modules/steam.nix
   ];
 
   # Setup to support wireless driver
