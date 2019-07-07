@@ -99,6 +99,8 @@ epkgs: with epkgs; [
   ox-ioslide
   pdf-tools
   peep-dired
+  polymode
+  poly-org
   prettier-js
   projectile
   py-isort
