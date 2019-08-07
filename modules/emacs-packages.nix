@@ -9,7 +9,7 @@ epkgs: with epkgs; [
   bury-successful-compilation
   ccls
   clj-refactor
-  cmake-mode
+  # cmake-mode
   color-identifiers-mode
   company-anaconda
   company-auctex
