@@ -7,6 +7,7 @@
       # Include desktop specific configuration
       ./extra.nix
 
+      ./modules/desktop-environment/xfce.nix
       ./modules/desktop-environment/ratpoison.nix
 
       # Modules
@@ -27,8 +28,9 @@
       # ./modules/docker.nix
       ./modules/media.nix
 
-      # Languages
+      # Development
       # ./modules/languages/java.nix
+      ./modules/android.nix
 
       ./modules/overlays.nix
 
