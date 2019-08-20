@@ -42,8 +42,6 @@
     "nixos-config=/home/jethro/nix-config/base.nix"
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
-
   hardware.pulseaudio = {
     enable = true;
     support32Bit = true;
@@ -89,7 +87,7 @@
     };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "18.03";
+  system.stateVersion = "19.03";
 
   system.autoUpgrade = {
     enable = true;
