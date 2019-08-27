@@ -6,5 +6,8 @@
     user = "jethro";
     dataDir = "/home/jethro/";
     openDefaultPorts = true;
+    declarative  = {
+      overrideDevices = false;
+    };
   };
 }
