@@ -7,10 +7,7 @@ let
   withPatches = pkg: patches:
     lib.overrideDerivation pkg (attrs: { inherit patches; });
 
-  myEmacs = pkgs.emacs;
-  # myEmacs = pkgs.emacs.override { inherit (pkgs) imagemagick; };
-
-  emacsWithPackages = (pkgs.emacsPackagesNgGen myEmacs).emacsWithPackages;
+  emacsWithPackages = (pkgs.emacsPackagesNgGen pkgs.emacsGit).emacsWithPackages;
 
   myPackages = import ./emacs-packages.nix;
   emacs = emacsWithPackages myPackages;
