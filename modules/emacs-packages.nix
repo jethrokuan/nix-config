@@ -53,6 +53,7 @@ epkgs: with epkgs; [
   focus
   forge
   gist
+  git-auto-commit-mode
   git-link
   go-dlv
   go-mode
