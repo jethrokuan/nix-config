@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 let
-  inherit (import ../emacs-packages.nix {inherit pkgs;}) myPackages;
+  myPackages = (import ../emacs-packages.nix);
 in
 {
   services.xserver.windowManager.exwm.enable = true;
