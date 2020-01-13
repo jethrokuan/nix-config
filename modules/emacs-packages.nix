@@ -38,7 +38,6 @@ epkgs: with epkgs; [
   elixir-mode
   emacs-libvterm
   emmet-mode
-  ensime
   esh-autosuggest
   ess
   esup
