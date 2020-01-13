@@ -7,8 +7,6 @@
       # Include desktop specific configuration
       ./extra.nix
 
-      # ./modules/desktop-environment/xfce.nix
-      # ./modules/desktop-environment/ratpoison.nix
       ./modules/desktop-environment/exwm.nix
 
       # Modules
@@ -17,25 +15,16 @@
       ./modules/fonts.nix
       ./modules/redshift.nix
       ./modules/shells.nix
-      ./modules/emacs.nix
       ./modules/browser.nix
-      # ./modules/syncthing.nix
       ./modules/dropbox.nix
       ./modules/pdf.nix
       ./modules/archiver.nix
       ./modules/udiskie.nix
       ./modules/udev.nix
       ./modules/email.nix
-      # ./modules/docker.nix
       ./modules/media.nix
 
-      # Development
-      # ./modules/languages/java.nix
-      ./modules/android.nix
-
       ./modules/overlays.nix
-
-      # ./modules/wine.nix
     ];
 
   nix.nixPath = [
