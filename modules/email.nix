@@ -7,7 +7,7 @@
     isync
     msmtp
     notmuch
-    pinentry_qt5
+    pinentry
   ];
 
   programs.gnupg.agent.enable = true;
