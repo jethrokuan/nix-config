@@ -18,14 +18,12 @@ in
     ntfs3g
     pass
     ripgrep
-    rofi
-    rofi-pass
     stow
     tree
     wget
     xclip
     xdg_utils
 
-    fluminurs # API for Luminus
+    # fluminurs # API for Luminus
   ];
 }
