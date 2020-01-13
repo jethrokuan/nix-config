@@ -19,8 +19,8 @@
       ./modules/shells.nix
       ./modules/emacs.nix
       ./modules/browser.nix
-      ./modules/syncthing.nix
-      # ./modules/dropbox.nix
+      # ./modules/syncthing.nix
+      ./modules/dropbox.nix
       ./modules/pdf.nix
       ./modules/archiver.nix
       ./modules/udiskie.nix
