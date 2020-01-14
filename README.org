@@ -11,3 +11,59 @@ Run ~nixos-rebuild~ pointing to the correct nixpkgs and nixos-config:
 #+BEGIN_SRC bash
   sudo nixos-rebuild -I nixpkgs=/home/jethro/nix-config/nixpkgs -I nixos-config=/home/jethro/nix-config/base.nix switch
 #+END_SRC
+
+** Firefox
+
+I like to use Tabless so each tab has its own window. This has
+advantages when using a tiling window manager. In Emacs, now every tab
+is a buffer, so I can treat file buffers, and web buffers
+equivalently.
+
+This makes the tab bar irrelevant, but we need to disable it via
+userChrome.css. Create the file in
+=~/.mozilla/firefox/profile.default/chrome/userChrome.css=
+
+#+begin_src css
+  /* Hide tabs toolbar Fx65+ */
+
+  /* IMPORTANT */
+  /*
+  Get window_control_placeholder_support.css
+  Window controls will be all wrong without it
+  ,*/
+
+  :root{ --uc-toolbar-height: 32px; }
+
+  :root:not([uidensity="compact"]){--uc-toolbar-height: 38px}
+
+  #TabsToolbar{ visibility: collapse !important }
+
+  :root:not([inFullscreen]) #nav-bar{
+      margin-top: calc(0px - var(--uc-toolbar-height));
+  }
+
+  #toolbar-menubar{
+      min-height:unset !important;
+      height:var(--uc-toolbar-height) !important;
+      position: relative;
+  }
+
+  #main-menubar{
+      -moz-box-flex: 1;
+      background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+      background-clip: padding-box;
+      border-right: 30px solid transparent;
+      border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px
+  }
+
+  #toolbar-menubar:not([inactive]){ z-index: 2 }
+  #toolbar-menubar[inactive] > #menubar-items {
+      opacity: 0;
+      pointer-events: none;
+      margin-left: var(--uc-window-drag-space-width,0px)
+  }
+#+end_src
+
+and then enable it ~about:config~ by setting
+~toolkit.legacyUserProfileCustomizations.stylesheets~ to true (FF 69
+and above).
