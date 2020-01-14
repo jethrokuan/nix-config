@@ -6,4 +6,6 @@
   boot.kernelPackages = pkgs.linuxPackages_4_14;
 
   services.upower.enable = true;
+
+  hardware.brightnessctl.enable = true;
 }

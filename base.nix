@@ -81,7 +81,7 @@
       uid = 1000;
       home = "/home/jethro";
       description = "Jethro Kuan";
-      extraGroups = ["wheel" "networkmanager" "uucp" "fuse"];
+      extraGroups = ["wheel" "networkmanager" "uucp" "fuse" "video"];
     };
 
   # The NixOS release to be compatible with for stateful data such as databases.
