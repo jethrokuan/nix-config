@@ -15,6 +15,7 @@ in
     gvfs
     less
     maim
+    networkmanagerapplet
     ntfs3g
     pass
     ripgrep
