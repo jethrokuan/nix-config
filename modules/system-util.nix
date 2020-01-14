@@ -25,6 +25,6 @@ in
     xclip
     xdg_utils
 
-    # fluminurs # API for Luminus
+    fluminurs # API for Luminus
   ];
 }
