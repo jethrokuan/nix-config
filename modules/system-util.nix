@@ -21,6 +21,7 @@ in
     stow
     tree
     wget
+    xorg.xbacklight
     xclip
     xdg_utils
 

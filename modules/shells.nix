@@ -12,6 +12,7 @@
   ];
 
   programs.fish.enable = true;
+  services.urxvtd.enable = true;
 
   users.defaultUserShell = "/run/current-system/sw/bin/fish";
 }

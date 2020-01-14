@@ -44,11 +44,14 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Select internationalisation properties.
-   i18n = {
-     consoleFont = "Lat2-Terminus16";
-     consoleKeyMap = "dvorak";
-     defaultLocale = "en_US.UTF-8";
-   };
+  console = {
+    font = "Lat2-Terminus16";
+    keyMap = "dvorak";
+  };
+  
+  i18n = {
+    defaultLocale = "en_US.UTF-8";
+  };
 
   # Set your time zone.
   time.timeZone = "Asia/Singapore";
@@ -66,6 +69,11 @@
   services.udisks2.enable = true;
 
   security.sudo.enable = true;
+
+  location = {
+    latitude = 1.3521;
+    longitude = 103.8198;
+  };
 
   users.extraUsers.jethro = {
       isNormalUser = true;
