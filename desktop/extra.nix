@@ -1,10 +1,5 @@
 { config, pkgs, ... }:
 {
-  imports = [
-    # ../modules/wine.nix
-    ../modules/steam.nix
-  ];
-
   # Setup to support wireless driver
   boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "fuse" "kvm-intel" "coretemp" ];
@@ -21,7 +16,6 @@
   nix.buildCores = 4;
 
   environment.systemPackages = with pkgs; [
-    lm_sensors
-    # calibre
+    calibre
   ];
 }
