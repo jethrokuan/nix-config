@@ -7,9 +7,7 @@
       # Include desktop specific configuration
       ./extra.nix
 
-      ./modules/desktop-environment/exwm.nix
-
-      # Modules
+      ./modules/desktop-env.nix
       ./modules/system-util.nix
       ./modules/networking.nix
       ./modules/fonts.nix
@@ -76,16 +74,16 @@
   };
 
   users.extraUsers.jethro = {
-      isNormalUser = true;
-      initialPassword = "password";
-      uid = 1000;
-      home = "/home/jethro";
-      description = "Jethro Kuan";
-      extraGroups = ["wheel" "networkmanager" "uucp" "fuse" "video"];
-    };
+    isNormalUser = true;
+    initialPassword = "password";
+    uid = 1000;
+    home = "/home/jethro";
+    description = "Jethro Kuan";
+    extraGroups = ["wheel" "networkmanager" "uucp" "fuse" "video"];
+  };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "19.03";
+  system.stateVersion = "19.10";
 
   system.autoUpgrade = {
     enable = true;
