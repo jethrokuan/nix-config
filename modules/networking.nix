@@ -1,7 +1,8 @@
 {pkgs, ...}:
 
 let
-  hostsVersion = "2daf2b0352ce1a8632610fd92e9db8238bdaab06";
+  version = "a8477304cacbced948559ac450160c3af0e4e132";
+  type = "fakenews-gambling-porn";
 in
 {
   networking.networkmanager.enable = true;
@@ -12,7 +13,7 @@ in
   ];
 
   networking.extraHosts = builtins.readFile (pkgs.fetchurl {
-    url = "https://github.com/StevenBlack/hosts/raw/${hostsVersion}/alternates/fakenews-gambling-porn/hosts";
+    url = "https://github.com/StevenBlack/hosts/raw/${version}/alternates/${type}/hosts";
     sha256 = "19dqbiyhi76ri384qc7aymj7j0v2i92lkyqyplyyzzb1xpl4gbpc";
   });
 }
