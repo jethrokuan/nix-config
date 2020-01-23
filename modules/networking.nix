@@ -12,6 +12,10 @@ in
     networkmanager_openvpn
   ];
 
+  environment.systemPackages = with pkgs; [
+    openfortivpn
+  ];
+
   networking.extraHosts = builtins.readFile (pkgs.fetchurl {
     url = "https://github.com/StevenBlack/hosts/raw/${version}/alternates/${type}/hosts";
     sha256 = "19dqbiyhi76ri384qc7aymj7j0v2i92lkyqyplyyzzb1xpl4gbpc";
