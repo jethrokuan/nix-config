@@ -3,7 +3,7 @@
 with pkgs;
 rustPlatform.buildRustPackage rec {
   name = "fluminurs-${version}";
-  version = "1.1.4";
+  version = "ebfbbbcb3a5ea2fc1ebb5563d2861558084eec36";
 
   nativeBuildInputs = [
     rustc cargo
@@ -18,10 +18,10 @@ rustPlatform.buildRustPackage rec {
     owner = "indocomsoft";
     repo = "fluminurs";
     rev = version;
-    sha256 = "1m3r6pmz95syw33avpkkvnd3wxl72jzb14cr9r573v0jbya0bgv7";
+    sha256 = "1xbpbwfvj0hxdhi195j9anyv1rji9g0aczsjg7h52rvl8ddvvkq2";
   };
 
-  cargoSha256 = "0nrh9n3vpc7dji4bbslhyyqlj458dljhmhb0w3j4kcng1gg1723z";
+  cargoSha256 = "111fsh0vk9ibl9m4cpm2zsp259r7xzakr1898vj5rji0b2jd6kxa";
 
   meta = with stdenv.lib; {
     description = "Luminus api";
