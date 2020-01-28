@@ -12,7 +12,6 @@
       ./modules/networking.nix
       ./modules/fonts.nix
       ./modules/redshift.nix
-      ./modules/shells.nix
       ./modules/browser.nix
       ./modules/dropbox.nix
       ./modules/pdf.nix
