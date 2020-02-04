@@ -1,13 +1,13 @@
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
-{
-  services.xserver.windowManager.exwm = {
-    enable = true;
-    extraPackages = epkgs: [
-      epkgs.emacs-libvterm
-    ];
+let emacs = import ./emacs.nix { inherit pkgs; };
+in {
+  services.xserver.windowManager.session = lib.singleton {
+    name = "exwm";
+    start = ''
+      ${emacs}/bin/emacs --eval '(progn (server-start) (exwm-enable))'
+    '';
   };
-  environment.systemPackages = with pkgs; [
-    numix-cursor-theme
-  ];
+
+  environment.systemPackages = [ emacs ];
 }

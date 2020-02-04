@@ -31,9 +31,9 @@
 
   hardware.pulseaudio = {
     enable = true;
-    support32Bit = true;
+    package = pkgs.pulseaudioFull;
   };
-  hardware.opengl.driSupport32Bit = true;
+
   nixpkgs.config.allowUnfree = true;
 
   # Use the systemd-boot EFI boot loader.

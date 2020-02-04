@@ -8,4 +8,6 @@
   services.upower.enable = true;
 
   hardware.brightnessctl.enable = true;
+  hardware.bluetooth.enable = true;
+  services.blueman.enable = true;
 }

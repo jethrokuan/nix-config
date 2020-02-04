@@ -18,6 +18,6 @@ in
 
   networking.extraHosts = builtins.readFile (pkgs.fetchurl {
     url = "https://github.com/StevenBlack/hosts/raw/${version}/alternates/${type}/hosts";
-    sha256 = "19dqbiyhi76ri384qc7aymj7j0v2i92lkyqyplyyzzb1xpl4gbpc";
+    sha256 = "1224242vsfyybvqmkxvjyp5715qvralb18b78b7mmy1r67s8pc1f";
   });
 }
