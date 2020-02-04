@@ -5,7 +5,8 @@ in {
   services.xserver.windowManager.session = lib.singleton {
     name = "exwm";
     start = ''
-      ${emacs}/bin/emacs --eval '(progn (server-start) (exwm-enable))'
+    ${emacs}/bin/emacs --daemon -f exwm-enable
+    ${emacs}/bin/emacsclient -c
     '';
   };
 

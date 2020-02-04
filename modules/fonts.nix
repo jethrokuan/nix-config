@@ -5,6 +5,7 @@
     enableGhostscriptFonts = true;
     fonts = with pkgs; [
       iosevka
+      libre-baskerville
       emacs-all-the-icons-fonts
       source-code-pro
       source-sans-pro
