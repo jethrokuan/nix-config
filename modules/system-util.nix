@@ -26,6 +26,12 @@ in
     xclip
     xdg_utils
 
+    # Screencasting
+    simplescreenrecorder
+    gifsicle
+    scrot
+    imagemagick
+
     fluminurs # API for Luminus
   ];
 }
