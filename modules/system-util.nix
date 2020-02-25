@@ -20,6 +20,7 @@ in
     ntfs3g
     pass
     ripgrep
+    starship
     stow
     tree
     wget
