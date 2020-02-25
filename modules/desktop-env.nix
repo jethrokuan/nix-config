@@ -10,5 +10,8 @@ in {
     '';
   };
 
-  environment.systemPackages = [ emacs ];
+  environment.systemPackages = [
+    emacs
+    pkgs.imagemagick
+  ];
 }
