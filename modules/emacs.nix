@@ -5,7 +5,9 @@ let
   inherit (stdenv) lib;
 
   emacsWithPackages = (pkgs.emacsPackagesNgGen pkgs.emacsGit).emacsWithPackages;
-in emacsWithPackages (epkgs: [
-  epkgs.exwm
-  epkgs.emacs-libvterm
+in emacsWithPackages (epkgs: with epkgs; [
+  exwm
+  emacs-libvterm
+  emacsql
+  emacsql-sqlite
 ])
