@@ -26,6 +26,7 @@ in
     wget
     xclip
     xdg_utils
+    proselint
 
     # Screencasting
     simplescreenrecorder
