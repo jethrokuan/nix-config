@@ -6,6 +6,7 @@ in
 {
   services.lorri.enable = true;
   environment.systemPackages = with pkgs; [
+    anki
     aspell
     aspellDicts.en
     direnv
@@ -21,7 +22,6 @@ in
     pass
     ripgrep
     starship
-    stow
     tree
     wget
     xclip
