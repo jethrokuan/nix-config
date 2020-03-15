@@ -10,14 +10,15 @@ in {
     '';
   };
 
-  environment.systemPackages = [
-    emacs
-    pkgs.imagemagick
-    pkgs.git
-    pkgs.ripgrep
-    # optional dependencies
-    pkgs.coreutils # basic GNU utilities
-    pkgs.fd
-    pkgs.clang
-  ];
+  environment.systemPackages =
+    ([emacs] ++
+     (with pkgs; [
+       imagemagick
+       git
+       ripgrep
+       coreutils
+       fd
+       clang
+       texlive.combined.scheme-medium
+     ]));
 }
