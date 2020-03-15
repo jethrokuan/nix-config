@@ -13,5 +13,11 @@ in {
   environment.systemPackages = [
     emacs
     pkgs.imagemagick
+    pkgs.git
+    pkgs.ripgrep
+    # optional dependencies
+    pkgs.coreutils # basic GNU utilities
+    pkgs.fd
+    pkgs.clang
   ];
 }
