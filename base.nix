@@ -31,7 +31,7 @@
 
   hardware.pulseaudio = {
     enable = true;
-    package = pkgs.pulseaudioFull;
+    support32Bit = true;
   };
 
   nixpkgs.config.allowUnfree = true;
@@ -78,7 +78,7 @@
     uid = 1000;
     home = "/home/jethro";
     description = "Jethro Kuan";
-    extraGroups = ["wheel" "networkmanager" "uucp" "fuse" "video"];
+    extraGroups = ["wheel" "networkmanager" "uucp" "fuse" "audio" "video"];
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.

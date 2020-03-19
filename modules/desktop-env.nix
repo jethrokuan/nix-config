@@ -19,6 +19,6 @@ in {
        coreutils
        fd
        clang
-       texlive.combined.scheme-medium
+       texlive.combined.scheme-full
      ]));
 }
