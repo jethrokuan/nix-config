@@ -8,20 +8,13 @@
       ./extra.nix
 
       ./modules/desktop-env.nix
-      ./modules/system-util.nix
-      ./modules/networking.nix
-      ./modules/fonts.nix
-      ./modules/redshift.nix
-      ./modules/browser.nix
       ./modules/dropbox.nix
-      ./modules/pdf.nix
-      ./modules/archiver.nix
-      ./modules/udiskie.nix
-      ./modules/udev.nix
       ./modules/email.nix
-      ./modules/media.nix
-
+      ./modules/fonts.nix
+      ./modules/networking.nix
       ./modules/overlays.nix
+      ./modules/redshift.nix
+      ./modules/udiskie.nix
     ];
 
   nix.nixPath = [
@@ -78,7 +71,7 @@
     uid = 1000;
     home = "/home/jethro";
     description = "Jethro Kuan";
-    extraGroups = ["wheel" "networkmanager" "uucp" "fuse" "audio" "video"];
+    extraGroups = ["wheel" "networkmanager" "uucp" "fuse" "audio" "video" "docker"];
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.
@@ -88,4 +81,81 @@
     enable = true;
     channel = "https://nixos.org/channels/nixos-unstable";
   };
+
+  environment.systemPackages = with pkgs; [
+    # Archiving
+    unrar
+    unzip
+    xz
+    zip
+
+    # Browser
+    firefox
+
+    # Media
+    vlc
+
+    # PDF
+    zathura
+    ghostscript
+
+    # System Utils
+        anki
+    aspell
+    aspellDicts.en
+    direnv
+    fd
+    file
+    fzf
+    gitAndTools.gitFull
+    gvfs
+    less
+    maim
+    networkmanagerapplet
+    ntfs3g
+    pass
+    ripgrep
+    starship
+    tree
+    wget
+    xclip
+    xdg_utils
+    proselint
+
+    # apps
+    spotify
+    tdesktop
+
+    # Screencasting
+    simplescreenrecorder
+    gifsicle
+    scrot
+    imagemagick
+
+    fluminurs # API for Luminus
+  ];
+
+  services.lorri.enable = true;
+
+  nixpkgs.config.firefox = {
+    enableGoogleTalkPlugin = true;
+  };
+
+  environment.variables.BROWSER = pkgs.lib.mkOverride 0 "firefox";
+
+  virtualisation.docker.enable = true;
+
+  services.udev = {
+     packages = [ pkgs.android-udev-rules ];
+     extraRules = ''
+     # Atmel ATMega32U4
+     SUBSYSTEMS=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2ff4", MODE:="0666"
+     # Atmel USBKEY AT90USB1287
+     SUBSYSTEMS=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2ffb", MODE:="0666"
+     # Atmel ATMega32U2
+     SUBSYSTEMS=="usb", ATTRS{idVendor}=="03eb", ATTRS{idProduct}=="2ff0", MODE:="0666"
+     # tmk keyboard products     https://github.com/tmk/tmk_keyboard
+     SUBSYSTEMS=="usb", ATTRS{idVendor}=="feed", MODE:="0666"
+     '';
+   };
 }
