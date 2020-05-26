@@ -125,6 +125,7 @@
     # apps
     spotify
     tdesktop
+    pypi2nix
 
     # Screencasting
     simplescreenrecorder
@@ -133,6 +134,7 @@
     imagemagick
 
     sqlite
+    graphviz
   ];
 
   services.lorri.enable = true;
