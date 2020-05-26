@@ -1,8 +1,8 @@
 { config, pkgs, ... }:
 {
   # Setup to support wireless driver
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   boot.kernelModules = [ "fuse" "kvm-intel" "coretemp" ];
+  boot.extraModulePackages = [ pkgs.linuxPackages.rtl88xxau-aircrack ];
 
   hardware.opengl.driSupport32Bit = true;
   hardware.pulseaudio.support32Bit = true;
@@ -18,5 +18,6 @@
   environment.systemPackages = with pkgs; [
     calibre
     steam
+    slack
   ];
 }

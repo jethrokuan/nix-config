@@ -132,14 +132,10 @@
     scrot
     imagemagick
 
-    fluminurs # API for Luminus
+    sqlite
   ];
 
   services.lorri.enable = true;
-
-  nixpkgs.config.firefox = {
-    enableGoogleTalkPlugin = true;
-  };
 
   environment.variables.BROWSER = pkgs.lib.mkOverride 0 "firefox";
 
