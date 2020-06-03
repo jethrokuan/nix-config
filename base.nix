@@ -115,6 +115,7 @@
     ntfs3g
     pass
     ripgrep
+    rsync
     starship
     tree
     wget

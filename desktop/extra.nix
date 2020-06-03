@@ -13,7 +13,6 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  virtualisation.virtualbox.host.enable = true;
   users.extraGroups.vboxusers.members = ["jethro"];
 
   nix.buildCores = 4;
@@ -22,5 +21,8 @@
     calibre
     steam
     slack
+    transmission-gtk
+    zoom-us
+    zotero
   ];
 }
