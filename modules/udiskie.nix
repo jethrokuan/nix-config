@@ -50,7 +50,7 @@
     environment.XDG_DATA_DIRS="${pkgs.gnome3.defaultIconTheme}/share:${pkgs.gnome3.gnome_themes_standard}/share";
     serviceConfig = {
       Restart = "always";
-      ExecStart = "${pkgs.udiskie}/bin/udiskie --automount --notify --tray --use-udisks2";
+      ExecStart = "${pkgs.udiskie}/bin/udiskie --automount";
     };
   };
 }

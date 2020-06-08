@@ -32,6 +32,7 @@
   # Use the systemd-boot EFI boot loader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.supportedFilesystems = [ "ntfs" ];
 
   # Select internationalisation properties.
   console = {
@@ -56,8 +57,7 @@
   services.xserver.xkbOptions = "ctrl:nocaps";
   services.openssh.enable = true;
   services.printing.enable = true;
-  services.udisks2.enable = true;
-
+  services.udisks2.enable = true;  
   security.sudo.enable = true;
 
   location = {
@@ -100,7 +100,7 @@
     ghostscript
 
     # System Utils
-        anki
+    anki
     aspell
     aspellDicts.en
     direnv
@@ -112,7 +112,6 @@
     less
     maim
     networkmanagerapplet
-    ntfs3g
     pass
     ripgrep
     rsync
@@ -121,6 +120,8 @@
     wget
     xclip
     xdg_utils
+    xfce.thunar
+    xfce.thunar-volman
     proselint
 
     # apps
