@@ -110,7 +110,9 @@
     gitAndTools.gitFull
     gvfs
     less
+    ledger
     maim
+    mimeo
     networkmanagerapplet
     pass
     ripgrep
