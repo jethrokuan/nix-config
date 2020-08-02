@@ -8,7 +8,9 @@
       ./extra.nix
 
       ./modules/desktop-env.nix
-      ./modules/dropbox.nix
+      # ./modules/dropbox.nix
+      ./modules/nextcloud.nix
+      ./modules/emacs.nix
       ./modules/email.nix
       ./modules/fonts.nix
       ./modules/networking.nix
@@ -112,8 +114,6 @@
     less
     ledger
     maim
-    mimeo
-    networkmanagerapplet
     pass
     ripgrep
     rsync
@@ -122,14 +122,13 @@
     wget
     xclip
     xdg_utils
-    xfce.thunar
-    xfce.thunar-volman
     proselint
 
     # apps
     spotify
     tdesktop
-    pypi2nix
+    bitwarden
+    bitwarden-cli
 
     # Screencasting
     simplescreenrecorder
@@ -142,8 +141,6 @@
   ];
 
   services.lorri.enable = true;
-
-  environment.variables.BROWSER = pkgs.lib.mkOverride 0 "firefox";
 
   virtualisation.docker.enable = true;
 
