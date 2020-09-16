@@ -19,11 +19,6 @@
       ./modules/udiskie.nix
     ];
 
-  nix.nixPath = [
-    "nixpkgs=/home/jethro/nix-config/nixpkgs"
-    "nixos-config=/home/jethro/nix-config/base.nix"
-  ];
-
   hardware.pulseaudio = {
     enable = true;
     support32Bit = true;
@@ -113,6 +108,7 @@
     gvfs
     less
     ledger
+    libsecret
     maim
     pass
     ripgrep
@@ -141,9 +137,15 @@
   ];
 
   services.lorri.enable = true;
-
   virtualisation.docker.enable = true;
-
+  nix = {
+    trustedUsers = ["root" "jethro"];
+    nixPath = [
+      "nixpkgs=/home/jethro/nix-config/nixpkgs"
+      "nixos-config=/home/jethro/nix-config/base.nix"
+    ];
+  };
+  
   services.udev = {
      packages = [ pkgs.android-udev-rules ];
      extraRules = ''
