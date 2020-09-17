@@ -8,8 +8,6 @@
       ./extra.nix
 
       ./modules/desktop-env.nix
-      # ./modules/dropbox.nix
-      ./modules/nextcloud.nix
       ./modules/emacs.nix
       ./modules/email.nix
       ./modules/fonts.nix
@@ -72,71 +70,13 @@
   };
 
   # The NixOS release to be compatible with for stateful data such as databases.
-  system.stateVersion = "19.10";
+  system.stateVersion = "20.09";
 
   system.autoUpgrade = {
     enable = true;
     channel = "https://nixos.org/channels/nixos-unstable";
   };
 
-  environment.systemPackages = with pkgs; [
-    # Archiving
-    unrar
-    unzip
-    xz
-    zip
-
-    # Browser
-    firefox
-
-    # Media
-    vlc
-
-    # PDF
-    zathura
-    ghostscript
-
-    # System Utils
-    anki
-    aspell
-    aspellDicts.en
-    direnv
-    fd
-    file
-    fzf
-    gitAndTools.gitFull
-    gvfs
-    less
-    ledger
-    libsecret
-    maim
-    pass
-    ripgrep
-    rsync
-    starship
-    tree
-    wget
-    xclip
-    xdg_utils
-    proselint
-
-    # apps
-    spotify
-    tdesktop
-    bitwarden
-    bitwarden-cli
-
-    # Screencasting
-    simplescreenrecorder
-    gifsicle
-    scrot
-    imagemagick
-
-    sqlite
-    graphviz
-  ];
-
-  services.lorri.enable = true;
   virtualisation.docker.enable = true;
   nix = {
     trustedUsers = ["root" "jethro"];
