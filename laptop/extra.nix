@@ -10,6 +10,5 @@
   environment.systemPackages = with pkgs; [
     brightnessctl
   ];
-  # hardware.bluetooth.enable = true;
-  # services.blueman.enable = true;
+  hardware.bluetooth.enable = true;
 }
