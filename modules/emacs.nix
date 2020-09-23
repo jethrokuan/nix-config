@@ -2,7 +2,7 @@
 
 {
   environment.systemPackages =
-    ([pkgs.emacsGit] ++
+    ([pkgs.emacsGcc] ++
      (with pkgs; [
        imagemagick
        git
@@ -24,6 +24,6 @@
 
   services.emacs = {
     enable = true;
-    package = pkgs.emacsGit;
+    package = pkgs.emacsGcc;
   };
 }
