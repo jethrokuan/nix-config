@@ -45,6 +45,7 @@
     gvfs
     aspell
     aspellDicts.en
+    sshfs
 
     # Emacs-related tooling
     proselint
@@ -54,6 +55,7 @@
     # Apps
     anki
     spotify
+    slack
     tdesktop
     bitwarden
     bitwarden-cli
@@ -66,6 +68,7 @@
     gifsicle
     scrot
     imagemagick
+    kdenlive
   ];
 
   programs.firefox.enable = true;
