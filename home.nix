@@ -1,6 +1,12 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball {
+      url = https://github.com/nix-community/emacs-overlay/archive/master.tar.gz;
+    }))
+  ];
+
   nixpkgs.config.allowUnfree = true;
   home.file.".config/nixpkgs/config.nix".text = ''
     { allowUnfree = true; }
@@ -25,7 +31,6 @@
 
     # PDF
     zathura
-    ghostscript
 
     # System Utils
     htop
@@ -69,12 +74,37 @@
     scrot
     imagemagick
     kdenlive
+
+    # Emacs
+    git
+    ripgrep
+    coreutils
+    fd
+    clang
+    texlive.combined.scheme-full
+
+
+    (makeDesktopItem {
+      name = "org-protocol";
+      exec = "emacsclient %u";
+      comment = "Org Protocol";
+      desktopName = "org-protocol";
+      type = "Application";
+      mimeType = "x-scheme-handler/org-protocol";
+    })
   ];
 
   programs.firefox.enable = true;
 
   services.lorri.enable = true;
   services.nextcloud-client.enable = true;
+
+  programs.emacs = {
+    enable = true;
+    package = pkgs.emacsGcc;
+  };
+  
+  services.emacs.enable = true;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage

@@ -8,7 +8,6 @@
       ./extra.nix
 
       ./modules/desktop-env.nix
-      ./modules/emacs.nix
       ./modules/email.nix
       ./modules/fonts.nix
       ./modules/networking.nix
