@@ -76,7 +76,6 @@
     kdenlive
 
     # Emacs
-    git
     ripgrep
     coreutils
     fd
