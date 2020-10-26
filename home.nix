@@ -97,7 +97,7 @@
   programs.firefox.enable = true;
 
   services.lorri.enable = true;
-  services.nextcloud-client.enable = true;
+  services.dropbox.enable = true;
 
   programs.emacs = {
     enable = true;
