@@ -63,7 +63,7 @@
     slack
     tdesktop
     bitwarden
-    bitwarden-cli
+    zotero
 
     # Media
     vlc
