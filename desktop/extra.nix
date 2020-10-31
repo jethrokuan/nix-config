@@ -13,16 +13,14 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  users.extraGroups.vboxusers.members = ["jethro"];
-
   nix.buildCores = 4;
 
-  environment.systemPackages = with pkgs; [
-    calibre
-    steam
-    slack
-    transmission-gtk
-    zoom-us
-    zotero
-  ];
+  # environment.systemPackages = with pkgs; [
+  #   calibre
+  #   steam
+  #   slack
+  #   transmission-gtk
+  #   zoom-us
+  #   zotero
+  # ];
 }
