@@ -81,7 +81,8 @@
     fd
     clang
     texlive.combined.scheme-full
-
+    zotero
+    calibre
 
     (makeDesktopItem {
       name = "org-protocol";

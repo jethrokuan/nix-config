@@ -13,14 +13,9 @@
 
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  nix.buildCores = 4;
-
-  # environment.systemPackages = with pkgs; [
-  #   calibre
-  #   steam
-  #   slack
-  #   transmission-gtk
-  #   zoom-us
-  #   zotero
-  # ];
+  environment.systemPackages = with pkgs; [
+    steam
+    slack
+    transmission-gtk
+  ];
 }
