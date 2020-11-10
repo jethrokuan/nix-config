@@ -83,7 +83,6 @@
       "nixpkgs=/home/jethro/nix-config/nixpkgs"
       "nixos-config=/home/jethro/nix-config/base.nix"
       "home-manager=/home/jethro/nix-config/home-manager"
-      "nix-ros=/home/jethro/nix-config/nix-ros-overlay"
     ];
   };
   
