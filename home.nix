@@ -30,7 +30,7 @@
     zip
 
     # PDF
-    zathura
+    evince
 
     # System Utils
     htop
