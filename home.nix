@@ -33,6 +33,7 @@
     evince
 
     # System Utils
+    flameshot
     htop
     tree
     rsync
